@@ -1,9 +1,8 @@
 <%= provide(:title, 'Sign up') %>
-
-
 <div class="row">
-	<h2>Register a new account</h2>
-  <div class="span6 offset3 form">
+	<%= render 'sign_in' %>
+  <div class="span5 form2">
+  	<h2>Register a new account</h2>
     <%= form_for(@user) do |f| %>
 			<%= render 'shared/error_messages' %>
       <%= f.label :name %>
@@ -18,7 +17,7 @@
       <%= f.label :password_confirmation, "Confirmation" %>
       <%= f.password_field :password_confirmation %>
 
-      <%= f.submit "Register", class: "btn btn-large btn-primary create" %>
+      <%= f.submit "Register >>", class: "btn btn-large btn-primary create" %>
     <% end %>
   </div>
 </div>

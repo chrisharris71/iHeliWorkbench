@@ -89,7 +89,7 @@ h5, h3	{
 input, textarea, select, .uneditable-input {
   border: 1px solid #bbb;
   width: 100%;
-  padding: 10px;
+  padding: 5px;
   height: auto;
   margin-bottom: 15px;
   @include box_sizing;
@@ -170,13 +170,20 @@ aside {
 }
 
 .btn-primary	{
-	border: 1px solid white;
-	background-image: none;
-	background-color: orange;
-	&:hover	{
-		background-color: #ff9900;
-	}
-
+	
+	padding: 5px 12px;
+	background-image: -moz-linear-gradient(50% 100%, #ffae0c, #ff980d);
+	background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, from(white), to(#f4f4f4));
+	
+	
+	border: 1px solid #bcbcbc;
+		&:hover	{
+		background-color: #ffae0c;
+		background-image: -moz-linear-gradient(50% 100%, #ffae0c, #ff980d);	
+		color: white;
+		text-shadow: none;
+		}
+		
 }
 
 .debug_dump	{
