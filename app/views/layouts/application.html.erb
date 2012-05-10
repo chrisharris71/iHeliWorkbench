@@ -4,19 +4,27 @@
     <title><%= full_title(yield(:title)) %></title>
     <%= stylesheet_link_tag    "application", media: "all" %>
     <%= javascript_include_tag "application" %>
+    <%= javascript_include_tag "http://www.google.com/jsapi" %>
+    <%= javascript_include_tag "cse" %>
     <%= csrf_meta_tags %>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <%= render 'layouts/shim' %>
   </head>
   <body>
+    <div id="wrapper">
     <%= render 'layouts/header' %>
-    <div class="container">
+    <div>
     	<% flash.each do |key, value| %>
         <%= content_tag(:div, value, class: "alert alert-#{key}") %>
       <% end %>
-      <%= yield %>
+      <div id="main_content"><%= yield %></div>
+      <%= render(:partial => 'layouts/sidebar') if (params[:action] == 'home') %>
+      
       <%= render 'layouts/footer' %>
+      
+
       <%= debug(params) if Rails.env.development? %>
     </div>
+  </div>
   </body>
 </html>

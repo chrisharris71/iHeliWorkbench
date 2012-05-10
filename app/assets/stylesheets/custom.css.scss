@@ -1,9 +1,19 @@
-@import "bootstrap";
-/* @import "twitter/bootstrap/responsive"; */
+
+
 
 /* mixins, variables, etc. */
 
 $grayMediumLight: #eaeaea;
+$grayLight: #bcbcbc;
+$grayLighter: e9e9e9;
+$gray: gray;
+$grayDarker: #7f7f7f;
+$white: #ffffff;
+$black: #000000;
+$darkblue: #339bb9;
+$darkestblue: #257085;
+$lightblue: #3299bb;
+$blue-gradient: linear-gradient(top, $lightblue, $darkblue);
 
 @mixin box_sizing	{
 	-moz-box-sizing: border-box;
@@ -17,10 +27,6 @@ html {
   overflow-y: scroll;
 }
 
-body {
-  padding-top: 60px;
-}
-
 section {
   overflow: auto;
 }
@@ -30,11 +36,13 @@ textarea {
 }
 
 .center {
+  margin: 0 auto;
   text-align: center;
   h1 {
     margin-bottom: 10px;
   }
 }
+
 
 /* typography */
 
@@ -62,25 +70,18 @@ h2 {
 p {
   font-size: 1.1em;
   line-height: 1.7em;
+  color: #7f7f7f;
 }
 
 
-/* header */
 
-#logo {
-  float: left;
-  margin-right: 10px;
-  font-size: 1.7em;
-  color: white;
-  text-transform: uppercase;
-  letter-spacing: -1px;
-  padding-top: 9px;
-  font-weight: bold;
-  line-height: 1;
-  &:hover {
-    color: white;
-    text-decoration: none;
-  }
+h5, h3	{
+
+	color: #7f7f7f;
+	margin: 10px;
+	margin-top: 7px;
+	text-align: center; 
+
 }
 
 /* forms */
@@ -134,32 +135,48 @@ aside {
 .gravatar {
   float: left;
   margin-right: 10px;
+  margin-left: 30px;
 }
 
-/* footer */
+/* users index */
 
-footer {
-  margin-top: 45px;
-  padding-top: 5px;
-  border-top: 1px solid $grayMediumLight;
-  color: $grayLight;
-  a {
-    color: $gray;
-    &:hover { 
-      color: $grayDarker;
-    }
-  }  
-  small { 
-    float: left; 
-  }
-  ul {
-    float: right;
-    list-style: none;
-    li {
-      float: left;
-      margin-left: 10px;
+.users {
+  list-style: none;
+  margin: 0;
+  li {
+    overflow: auto;
+    padding: 10px 0;
+    border-top: 1px solid $grayLighter;
+    &:last-child {
+      border-bottom: 1px solid $grayLighter;
     }
   }
+}
+
+.hero-unit	{
+	
+	width: 60%;
+	
+	/*---- drop shadow and inner shadow code ----*/
+	box-shadow: inset 0px 1px 2px #e9e9e9;
+	box-shadow: 0px 1px 2px #e9e9e9;
+	
+	/*---- box gradients and border radii code ----*/
+	background-image: -moz-linear-gradient(50% 100%, white, #f4f4f4);
+	background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, from(white), to(#f4f4f4));
+	border: 1px solid #e9e9e9;
+	border-radius: 5px;
+
+}
+
+.btn-primary	{
+	border: 1px solid white;
+	background-image: none;
+	background-color: orange;
+	&:hover	{
+		background-color: #ff9900;
+	}
+
 }
 
 .debug_dump	{

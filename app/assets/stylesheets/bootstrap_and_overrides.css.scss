@@ -1,0 +1,425 @@
+// Set the correct sprite paths
+$iconSpritePath: image-path('glyphicons-halflings.png');
+$iconWhiteSpritePath: image-path('glyphicons-halflings-white.png');
+
+$navbarBackground: #fff;
+$navbarBackgroundHighlight: #fff;
+$navbarText: #424242;
+$navbarLinkColor: #424242;
+
+@import "bootstrap";
+body { padding-top: 20px; }
+@import "bootstrap-responsive";
+@import url(www.google.com/cse/api/overlay.css);
+/* --- Custom CSS Starts Here --- */
+
+body	{
+	background-color: #424242;
+	width: 100%;
+	margin: 10px auto;
+	font-family: "Arial", "sans-serif";
+}
+
+.container	{
+	width: 100%;
+}
+
+#wrapper	{
+	
+	width: 960px;
+	height: auto;
+	margin: 0 auto;
+	
+	/*---- drop shadow and inner shadow code ----*/
+	box-shadow: inset 0px 1px 2px #e9e9e9;
+	box-shadow: 0px 1px 2px #e9e9e9;
+	
+	/*---- box gradients and border radii code ----*/
+	background-image: -moz-linear-gradient(50% 100%, white, #f8f8f8);
+	background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, from(white), to(#f8f8f8));
+	border: 1px solid #e9e9e9;
+	border-radius: 5px;
+	
+	
+}
+
+.header	{
+
+	width: 100%;
+	height: 160px;
+/* 	border-bottom: 5px solid #ff9900;	 */
+
+}
+
+#header_table	{
+	
+	float: right;
+	margin-right: 5px;
+	width: 40%;
+
+}
+
+#cse	{
+	width: 100%;
+	margin-top: 10px;
+	width: 100%;
+}
+
+.gsc-control-cse	{
+	border-radius: 5px;
+	height: auto;
+}
+
+/* --- The whole search container div ---*/
+.cse .gsc-control-cse, .gsc-control-cse	{
+	float: right;
+	background-color: inherit; 
+	border-color: #f6f6f6;
+	border-radius: 5px;
+	width: 50%;
+}
+
+
+.cse input.gsc-input,input.gsc-input	{
+	border-radius: 5px;
+/* 	height: 20px; */
+}
+
+.gsc-input, .gse-search-button	{
+/* 	margin: 10px; */
+}
+
+
+input.gsc-search-button	{
+	font-size: 12px;
+	text-align: center;
+	margin-left: 12px;
+	height: 20px;
+	padding: 5px;
+	/*---- drop shadow and inner shadow code ----*/
+	box-shadow: inset 0px 1px 2px #e9e9e9;
+	box-shadow: 0px 1px 2px #e9e9e9;
+	
+	/*---- box gradients and border radii code ----*/
+	background-image: -moz-linear-gradient(50% 100%, white, #f4f4f4);
+	background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, from(white), to(#f4f4f4));
+	border: 1px solid #e9e9e9;
+	border-radius: 5px;
+}
+
+ul.dropdown-menu	{
+	min-width: 100px;
+	max-width: 120px;
+	margin: 5px;
+	padding: 0px;
+}
+
+ul.dropdown-menu li a{
+	margin: 5px;
+	border: none;
+}
+
+#main_nav {	
+	width: 100%;
+	padding-left: 0px;
+	padding-top: 25px;
+	display: -moz-box;
+	display: -webkit-box;
+	-moz-box-orient: horizontal;
+	-webkit-box-orient: horizontal;
+	li	{
+		list-style-type: none;
+	}
+
+}
+
+#main_nav a	{	
+	margin: 16px;
+	font-size: 14px;
+	color: #7f7f7f;
+	text-decoration: none;
+}
+
+div#main_nav	{
+	-moz-box-flex: 1;
+	-moz-box-pack: end;
+	-webkit-box-flex: 1;
+	-webkit-box-pack: end;
+	li	{
+		text-decoration: none;
+	}
+}
+
+#main_nav a:hover	{
+	border-bottom: 3px solid #3299bb;
+}
+
+#main_nav a:active	{
+	border-bottom: 3px solid #3299bb;
+}
+
+.form	{
+	width: 50%;
+}
+
+.navbar .brand {
+  color: #FAFFB8;
+}
+
+/* --- Home Page Wizard and Posts CSS --- */
+#wizard	{
+
+	width: 696px;
+	height: auto;
+	margin: 40px 20px 0px 20px;
+	/*---- drop shadow and inner shadow code ----*/
+	box-shadow: inset 0px 1px 2px #e9e9e9;
+	box-shadow: 0px 1px 2px #e9e9e9;
+	
+	/*---- box gradients and border radii code ----*/
+	/*---- gradient and image in the same div ----*/
+	background-image: url(trex700e_scaled.png), -moz-linear-gradient(50% 100%, white, #f4f4f4);
+	background-image: url(trex700e_scaled.png), -webkit-gradient(linear, 50% 100%, 50% 0%, from(white), to(#f4f4f4));
+	border: 1px solid #e9e9e9;
+	border-radius: 5px;	
+	background-position: 97% 20%, 0% 0%;
+	background-repeat: no-repeat;
+	
+}
+
+#wiz_desc	{
+
+	width: 58%;
+	margin-left: 10px;
+	
+}
+
+#wiz_desc p	{
+
+	font-size: 14px;
+	line-height: 1.3em;
+	width: 100%;
+	margin: 0px 10px 0px 20px;
+	word-wrap: break-word;
+
+}
+
+#wiz_desc h2	{
+
+	font-weight: normal;
+	width: 100%;
+	margin: 20px 0 10px 10px;
+	color: #424242;
+	text-align: center;
+
+}
+
+#wizard #more_info img	{
+
+	width: 92px;
+	margin: 0 20px 10px 84.5%;
+	
+}
+
+#column1	{
+
+	border-right: 1px solid #e9e9e9;
+	padding-right: 30px;
+	
+}
+
+#column1, #column2	{
+
+	float: left;
+	width: 325px;
+	height: auto;
+	margin: 30px 0px 15px 20px;
+/* 	border: 1px solid black; */
+}
+
+#column2	{
+
+	margin-left: 15px;
+
+}
+
+#column1 h3, #column2 h3	{ /* --- Headers for the homepage listings --- */ 
+
+	font-weight: normal;
+	font-size: 16px;
+	text-align: left;
+	margin: 10px 15px 0 20px;
+	
+}
+
+#column1 ul, #column2 ul	{
+
+	list-style-type: none;
+	padding: 0px;
+/* 	margin-left: 10px; */
+	
+
+}
+
+.post .post_title 	{
+
+	text-decoration: underline;
+	color: #3299bb;
+	font-size: 12px;
+}
+
+.post	{
+
+	text-align: left;
+		
+}
+
+.post a	{
+
+	text-decoration: none;
+
+}
+
+.post_text	{
+
+	text-align: left;
+	margin-left: 30px;
+	font-size: 12px;
+	font-weight: normal;
+	border-bottom: 1px solid #e9e9e9;
+	padding-bottom: 15px;
+
+
+}
+
+.navbar-inner	{
+	background-image: none;
+	background-color: none;
+	border: none;
+	border-radius: 0px;
+	box-shadow: none;
+	border-bottom: 5px solid #ff9900;
+}
+
+#main_content	{
+	float: left;
+	width: auto;
+	
+}
+
+#main_content .row	{
+	
+	/*---- drop shadow and inner shadow code ----*/
+	box-shadow: inset 0px 1px 2px #e9e9e9;
+	box-shadow: 0px 1px 2px #e9e9e9;
+	
+	/*---- box gradients and border radii code ----*/
+	background-image: -moz-linear-gradient(50% 100%, white, #f4f4f4);
+	background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, from(white), to(#f4f4f4));
+	border: 1px solid #e9e9e9;
+	border-radius: 5px;
+	padding: 10px 30px 10px 30px;
+	margin: 10px;
+	margin-left: 50px;
+	h2	{
+		text-align: left;
+		margin-bottom: 20px;
+	}
+ .btn-primary	{
+		margin-left: 225px;
+		}
+	.create	{
+		margin-left: 217px;
+	}
+}
+
+#main_content .form	{
+	width: 300px;
+	margin: 0 auto;
+	padding: 10px;
+	p	{
+		
+		font-size: 14px;
+	}
+}
+
+#sidebar	{
+	clear: right;
+	float: right;
+	margin: 40px 20px 0 0px;
+	width: 200px;
+	
+	/*---- drop shadow and inner shadow code ----*/
+	box-shadow: inset 0px 1px 2px #e9e9e9;
+	box-shadow: 0px 1px 2px #e9e9e9;
+	
+	/*---- box gradients and border radii code ----*/
+	background-image: -moz-linear-gradient(50% 100%, white, #f4f4f4);
+	background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, from(white), to(#f4f4f4));
+	border: 1px solid #e9e9e9;
+	border-radius: 5px;
+}
+
+#sidebar a img	{
+	margin: 10px 0px 0px 10px;
+}
+
+#links	{
+	padding-bottom: 10px;
+	border-bottom: 1px solid #e9e9e9;
+}
+
+#social	{
+	width: 200px;
+	clear: both;
+	float: none;
+	margin: 0 auto;
+	padding-bottom: 10px;
+}
+
+#social a 	{
+	width: 200px;
+	img {
+		margin: 0 auto;
+	}
+}
+
+#follow	{
+	margin: 0 auto;
+	padding-top: 0px;
+	text-align: center;
+}
+
+#footer	{
+	padding-top: 40px;
+	clear: both;
+}
+
+#footer_links {
+	width: 100%;
+	display: -moz-box;
+	display: -webkit-box;
+	-moz-box-orient: horizontal;
+	-webkit-box-orient: horizontal;
+}
+
+#footer_links a	{
+	margin: 16px;
+	font-size: 14px;
+	color: #7f7f7f;
+	text-decoration: none;
+}
+
+div#footer_links	{
+	-moz-box-flex: 1;
+	-moz-box-pack: center;
+	-webkit-box-flex: 1;
+	-webkit-box-pack: center;
+}
+
+#footer p	{
+	font-size: 14px;
+	color: #7f7f7f;
+	text-align: center;
+	margin: 20px 0 20px 0;
+}
