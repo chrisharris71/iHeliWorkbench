@@ -2,7 +2,7 @@ class SessionsController < ApplicationController
 	
 
 	def new
-  	redirect_to users/new
+  	
   end
 
   def create
