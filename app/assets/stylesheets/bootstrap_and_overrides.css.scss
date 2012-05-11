@@ -177,11 +177,15 @@ div#main_nav	{
 		margin-bottom: 20px;
 		margin-top: 20px;
 	}
+	
  .btn-primary	{
 		margin-left: 196px;
 		}
 	.create	{
 		margin-left: 187px;
+		}
+	.update	{
+		margin-left: 170px;
 	}
 }
 
@@ -197,9 +201,7 @@ div#main_nav	{
 }
 
 .row	{
-
 	height: auto;
-
 }
 
 #main_content .row .form	{
@@ -218,9 +220,20 @@ div#main_nav	{
 	margin-top: 30px;
 	padding-left: 50px;
 	padding-right: 50px;
-
-	/* float: right; */
 }
+
+.row .form3	{
+	height: 30em;
+	width: 250px;
+	margin-top: 30px;
+	padding-left: 82px;
+	padding-right: 50px;
+}
+
+.row .form3 > img a	{
+	padding-left: 15px;
+}
+
 
 .navbar .brand {
   color: #FAFFB8;

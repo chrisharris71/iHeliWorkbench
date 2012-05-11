@@ -171,7 +171,7 @@ DEPENDENCIES
   growl (= 1.0.3)
   guard-rspec (= 0.5.5)
   jquery-rails (= 2.0.0)
-  pg (= 0.12.2)
+  pg
   rails (= 3.2.3)
   rspec-rails (= 2.9.0)
   sass-rails (= 3.2.4)
