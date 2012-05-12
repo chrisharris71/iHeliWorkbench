@@ -239,34 +239,6 @@ div#main_nav	{
   color: #FAFFB8;
 }
 
-/* microposts */
-
-.microposts {
-  list-style: none;
-  margin: 10px 0 0 50px;
-
-  li {
-    padding: 10px 0;
-    border-top: 1px solid #e8e8e8;
-  }
-}
-.content {
-  display: block;
-}
-.timestamp {
-  color: $grayLight;
-}
-.gravatar {
-  float: left;
-  margin-right: 10px;
-}
-aside {
-  textarea {
-    height: 100px;
-    margin-bottom: 5px;
-  }
-}
-
 /* --- Home Page Wizard and Posts CSS --- */
 #wizard	{
 

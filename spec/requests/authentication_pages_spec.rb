@@ -35,7 +35,7 @@ describe "Authentication" do
     	
     	describe "followed by signout" do
         	before { click_link "Sign out" }
-        	# it { should have_link('Sign in') }
+        	it { should have_link('Sign in') }
       end
     end
   end
@@ -65,7 +65,7 @@ describe "Authentication" do
 
         describe "visiting the edit page" do
           before { visit edit_user_path(user) }
-#           it { should have_selector('title', text: 'Sign in') }
+          it { should have_selector('title', text: 'Sign in') }
         end
 
         describe "submitting to the update action" do
@@ -75,7 +75,7 @@ describe "Authentication" do
         
         describe "visiting the user index" do
           before { visit users_path }
-#           it { should have_selector('title', text: 'Sign in') }
+          it { should have_selector('title', text: 'Sign in') }
         end
       end
     
