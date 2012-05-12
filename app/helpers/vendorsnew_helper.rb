@@ -1,0 +1,2 @@
+module VendorsnewHelper
+end
