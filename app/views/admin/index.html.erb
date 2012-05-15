@@ -1,0 +1,25 @@
+
+<% if current_user.admin? && !current_user?(user) %>
+
+	<div class="row">
+		<h2>Welcome to the Admin Page</h2>
+		<div id="admin_menu">
+			<ul>
+				<li><%= link_to "Edit Users", users_path %></li>
+				<li><%= link_to "Edit Helicopter Kits", heli_kits_path %></li>
+				<li><%= link_to "Edit Main Blades", main_blades_path %></li>
+				
+			</ul>
+			
+		</div>
+	</div>
+
+
+<% else %>
+	<div class="row">
+		<h2>You're not logged in as an administrator!</h2>
+		<%= link_to "Login as administrator", signin_path %>
+	</div>
+	
+<% end %>
+			

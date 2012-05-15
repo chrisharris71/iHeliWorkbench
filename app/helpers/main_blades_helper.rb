@@ -1,0 +1,2 @@
+module MainBladesHelper
+end

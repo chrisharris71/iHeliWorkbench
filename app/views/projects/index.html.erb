@@ -2,9 +2,8 @@
 
 <table>
   <tr>
-    <th>Name</th>
     <th>User</th>
-    <th>Email</th>
+    <th>User name</th>
     <th></th>
     <th></th>
     <th></th>
@@ -12,9 +11,8 @@
 
 <% @projects.each do |project| %>
   <tr>
-    <td><%= project.name %></td>
-    <td><%= project.user %></td>
-    <td><%= project.email %></td>
+    <td><%= project.user_id %></td>
+    <td><%= project.user_name %></td>
     <td><%= link_to 'Show', project %></td>
     <td><%= link_to 'Edit', edit_project_path(project) %></td>
     <td><%= link_to 'Destroy', project, confirm: 'Are you sure?', method: :delete %></td>

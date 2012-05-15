@@ -1,0 +1,47 @@
+<%= form_for(@heli_kit) do |f| %>
+  <% if @heli_kit.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@heli_kit.errors.count, "error") %> prohibited this heli_kit from being saved:</h2>
+
+      <ul>
+      <% @heli_kit.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :part_number %><br />
+    <%= f.text_field :part_number %>
+  </div>
+  <div class="field">
+    <%= f.label :size %><br />
+    <%= f.text_field :size %>
+    <%= f.select(:manufacturer, :manufacturer.name) %>
+  </div>
+  <div class="field">
+    <%= f.label :power %><br />
+    <%= f.text_field :power %>
+  </div>
+  <div class="field">
+    <%= f.label :manufacturer_id %><br />
+    <%= f.number_field :manufacturer_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+	<% end %>
+
+<%= simple_form_for (@heli_kit, :html => {:class => 'form3' }) do |f| %>
+  <%= f.input :name %>
+  <%= f.input :part_number %>
+  <%= f.input :size %>
+  <%= f.input :power %>
+  <%= f.input :manufacturer_id %>
+  <%= f.button :submit %>
+<% end %>

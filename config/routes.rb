@@ -1,9 +1,13 @@
 SampleApp::Application.routes.draw do
+  
   resources :projects
-
-  resources :vendors
-
- 	resources :users 
+  resources :main_blades
+  resources :engines
+  resources :elec_motors
+  resources :heli_kits
+  resources :manufacturers
+  resources :users
+  resources :admin 
  	
  	resources :sessions, only: [:new, :create, :destroy]
 
@@ -16,7 +20,7 @@ SampleApp::Application.routes.draw do
   match '/help',    to: 'static_pages#help'
   match '/about',   to: 'static_pages#about'
   match '/contact', to: 'static_pages#contact'
-	match '/vendors', to: 'vendors#new'
+  match '/admin',		to: 'admin#index' 
   
 	
 	

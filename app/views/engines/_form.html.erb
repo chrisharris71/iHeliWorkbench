@@ -1,0 +1,29 @@
+<%= form_for(@engine) do |f| %>
+  <% if @engine.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@engine.errors.count, "error") %> prohibited this engine from being saved:</h2>
+
+      <ul>
+      <% @engine.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :part_number %><br />
+    <%= f.text_field :part_number %>
+  </div>
+  <div class="field">
+    <%= f.label :size %><br />
+    <%= f.text_field :size %>
+  </div>
+  <div class="field">
+    <%= f.label :manufacturer_id %><br />
+    <%= f.number_field :manufacturer_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

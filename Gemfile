@@ -6,6 +6,8 @@ gem 'bcrypt-ruby', '3.0.1' # To use ActiveModel has_secure_password
 gem 'faker', '1.0.1'
 gem 'will_paginate', '3.0.3'
 gem 'bootstrap-will_paginate', '0.0.5'
+gem 'simple_form'
+gem 'country_select'
 
 
 # Bundle edge Rails instead:

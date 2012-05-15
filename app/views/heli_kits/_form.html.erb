@@ -1,0 +1,15 @@
+<div class="row">
+	<div>
+		<h2>Add new helicopter kit</h2>
+		<%= simple_form_for @heli_kit, :html => {:class => 'form'} do |f| %>
+		  <%= f.input :name %>
+		  <%= f.input :part_number %>
+		  <%= f.input :size %>
+		  <%= f.input :power %>
+		  <%= f.input :manufacturer_id %>
+		  <%= f.button :submit %>
+		<% end %>
+		<%= link_to 'Back', heli_kits_path %>
+	</div>
+	
+</div>

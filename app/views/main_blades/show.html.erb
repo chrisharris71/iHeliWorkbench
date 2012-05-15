@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Part number:</b>
+  <%= @main_blade.part_number %>
+</p>
+
+<p>
+  <b>Blade length:</b>
+  <%= @main_blade.blade_length %>
+</p>
+
+<p>
+  <b>Size:</b>
+  <%= @main_blade.size %>
+</p>
+
+<p>
+  <b>Manufacturer:</b>
+  <%= @main_blade.manufacturer_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_main_blade_path(@main_blade) %> |
+<%= link_to 'Back', main_blades_path %>

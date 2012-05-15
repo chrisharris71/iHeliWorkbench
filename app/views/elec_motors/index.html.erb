@@ -1,0 +1,27 @@
+<h1>Listing elec_motors</h1>
+
+<table>
+  <tr>
+    <th>Part number</th>
+    <th>Size</th>
+    <th>Manufacturer</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @elec_motors.each do |elec_motor| %>
+  <tr>
+    <td><%= elec_motor.part_number %></td>
+    <td><%= elec_motor.size %></td>
+    <td><%= elec_motor.manufacturer_id %></td>
+    <td><%= link_to 'Show', elec_motor %></td>
+    <td><%= link_to 'Edit', edit_elec_motor_path(elec_motor) %></td>
+    <td><%= link_to 'Destroy', elec_motor, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Elec motor', new_elec_motor_path %>

@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @heli_kit.name %>
+</p>
+
+<p>
+  <b>Part number:</b>
+  <%= @heli_kit.part_number %>
+</p>
+
+<p>
+  <b>Size:</b>
+  <%= @heli_kit.size %>
+</p>
+
+<p>
+  <b>Power:</b>
+  <%= @heli_kit.power %>
+</p>
+
+<p>
+  <b>Manufacturer:</b>
+  <%= @heli_kit.manufacturer.name %>
+</p>
+
+
+<%= link_to 'Edit', edit_heli_kit_path(@heli_kit) %> |
+<%= link_to 'Back', heli_kits_path %>

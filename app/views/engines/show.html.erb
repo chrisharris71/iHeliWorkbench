@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Part number:</b>
+  <%= @engine.part_number %>
+</p>
+
+<p>
+  <b>Size:</b>
+  <%= @engine.size %>
+</p>
+
+<p>
+  <b>Manufacturer:</b>
+  <%= @engine.manufacturer_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_engine_path(@engine) %> |
+<%= link_to 'Back', engines_path %>

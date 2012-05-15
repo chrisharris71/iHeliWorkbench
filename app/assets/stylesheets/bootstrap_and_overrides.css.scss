@@ -9,7 +9,7 @@ $navbarLinkColor: #424242;
 
 @import "bootstrap";
 @import "bootstrap-responsive";
-@import url(www.google.com/cse/api/overlay.css);
+/* @import url(www.google.com/cse/api/overlay.css); */
 /* --- Custom CSS Starts Here --- */
 
 body	{
@@ -17,6 +17,7 @@ body	{
 	width: 100%;
 	margin: 10px auto;
 	font-family: "Arial", "sans-serif";
+	line-height: 14px;
 }
 
 .container	{
@@ -61,6 +62,11 @@ body	{
 	width: 100%;
 }
 
+.gsc-search-box td	{
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+}
+
 .gsc-control-cse	{
 	border-radius: 5px;
 	height: auto;
@@ -90,8 +96,8 @@ input.gsc-search-button	{
 	font-size: 12px;
 	text-align: center;
 	margin-left: 12px;
-	height: 20px;
-	padding: 5px;
+/* 	height: 20px; */
+	padding: 5px 10px;
 	/*---- drop shadow and inner shadow code ----*/
 	box-shadow: inset 0px 1px 2px #e9e9e9;
 	box-shadow: 0px 1px 2px #e9e9e9;
@@ -101,18 +107,6 @@ input.gsc-search-button	{
 	background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, from(white), to(#f4f4f4));
 	border: 1px solid #e9e9e9;
 	border-radius: 5px;
-}
-
-ul.dropdown-menu	{
-	min-width: 100px;
-	max-width: 120px;
-	margin: 5px;
-	padding: 0px;
-}
-
-ul.dropdown-menu li a{
-	margin: 5px;
-	border: none;
 }
 
 #main_nav {	
@@ -126,14 +120,14 @@ ul.dropdown-menu li a{
 	li	{
 		list-style-type: none;
 	}
-
 }
 
 #main_nav a	{	
-	margin: 16px;
+	margin: 10px;
 	font-size: 14px;
 	color: #7f7f7f;
 	text-decoration: none;
+	
 }
 
 div#main_nav	{
@@ -153,6 +147,25 @@ div#main_nav	{
 #main_nav a:active	{
 	border-bottom: 3px solid #3299bb;
 }
+
+#main_nav li > a:hover, .dropdown-menu .active > a, .dropdown-menu .active > a:hover {
+  background-color: white;
+/*   border-bottom: none; */
+  text-decoration: none;
+  
+}
+
+.dropdown-menu {
+	min-width: 80px;
+	padding: 0px;
+	a	{
+	padding: 0px;
+	}
+}
+
+#main_nav li > a	{
+}
+
 
 #main_content	{
 	float: left;
@@ -232,6 +245,15 @@ div#main_nav	{
 	padding-right: 50px;
 }
 
+.form4	{
+	height: 30em;
+	width: 250px;
+	margin-top: 30px;
+	padding-left: 20px;
+	padding-right: 50px;
+}
+
+
 #main_content .row .form_nv	{
 	width: 300px;
 	padding-left: 250px;
@@ -240,6 +262,31 @@ div#main_nav	{
 
 .row .form3 > img a	{
 	padding-left: 15px;
+}
+
+.product_index	{
+		width: 100%;
+		td	{
+			text-align: left;
+/* 			margin-left: 30px; */
+		}
+		th{
+			width: auto;
+			text-align: left;
+			padding: 5px 80px 5px 0px;
+		}
+		th:nth-last-child(-n+3)	{
+			text-align: left;
+			padding: 0px;
+		}
+}
+
+.product_index > tr:nth-of-type(even)	{
+	background-color: #ddd;
+}
+
+.sed_links	{
+	padding-left: 10px;
 }
 
 
@@ -435,6 +482,10 @@ aside {
 #links	{
 	padding-bottom: 10px;
 	border-bottom: 1px solid #e9e9e9;
+}
+
+#admin_menu li{
+	list-style-type: none;
 }
 
 #social	{

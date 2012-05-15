@@ -3,9 +3,8 @@ require 'spec_helper'
 describe "projects/edit" do
   before(:each) do
     @project = assign(:project, stub_model(Project,
-      :name => "MyString",
-      :user => "MyString",
-      :email => "MyString"
+      :user_id => 1,
+      :user_name => "MyString"
     ))
   end
 
@@ -14,9 +13,8 @@ describe "projects/edit" do
 
     # Run the generator again with the --webrat flag if you want to use webrat matchers
     assert_select "form", :action => projects_path(@project), :method => "post" do
-      assert_select "input#project_name", :name => "project[name]"
-      assert_select "input#project_user", :name => "project[user]"
-      assert_select "input#project_email", :name => "project[email]"
+      assert_select "input#project_user_id", :name => "project[user_id]"
+      assert_select "input#project_user_name", :name => "project[user_name]"
     end
   end
 end

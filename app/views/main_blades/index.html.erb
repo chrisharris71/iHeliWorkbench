@@ -1,0 +1,38 @@
+<% if current_user.admin? && !current_user?(user) %>
+<div class="form4">
+<h2>All Main Blades</h2>
+
+<table class="product_index">
+  <tr>
+    <th>Part&nbsp#</th>
+    <th>Blade&nbspLength</th>
+    <th>Size</th>
+    <th>Manufacturer</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @main_blades.each do |main_blade| %>
+  <tbody>
+	  <tr>
+	    <td><%= main_blade.part_number %></td>
+	    <td><%= main_blade.blade_length %></td>
+	    <td><%= main_blade.size %></td>
+	    <td><%= main_blade.manufacturer.name %></td>
+	    <td><%= link_to 'Show', main_blade %></td>
+	    <td><%= link_to 'Edit', edit_main_blade_path(main_blade) %></td>
+	    <td><%= link_to 'Destroy', main_blade, confirm: 'Are you sure?', method: :delete %></td>
+	  </tr>
+	<% end %>
+	</tbody>
+</table>
+
+<br />
+
+<%= link_to 'New Main blade', new_main_blade_path %>
+<% else %>
+		
+		<%= render index %>
+		<% end %>
+	</div>
