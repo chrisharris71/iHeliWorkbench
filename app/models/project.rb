@@ -1,7 +1,7 @@
 class Project < ActiveRecord::Base
-  attr_accessible :user_id, :user_name, :type, :engine, :power, :main_blade, :heli_kit, :exhaust, :elec_motor, :speed_control, :cyclic_servo, :rudder_servo, :throttle_servo, :rudder_gyro, :fbl_unit, :governor, :tail_blade, :paddle, :receiver
-  
-  belongs_to :user
+  attr_accessible :cyclic_servo, :elec_motor, :engine, :exhaust, :fbl_unit, :governor, :heli_kit, :main_blade, :paddle, :power, :receiver, :rudder_gyro, :rudder_servo, :speed_control, :tail_blade, :throttle_servo, :type, :user_id
+
+	belongs_to :user
   has_one :engine, :dependent => :destroy
   has_one :main_blade, :dependent => :destroy
   has_one :heli_kit, :dependent => :destroy
@@ -17,4 +17,7 @@ class Project < ActiveRecord::Base
   has_one :tail_blade, :dependent => :destroy
   has_one :paddle, :dependent => :destroy
   has_one :receiver, :dependent => :destroy
+  has_one :power, :dependent => :destroy
+  has_one :type, :dependent => :destroy
+
 end

@@ -3,7 +3,23 @@
 <table>
   <tr>
     <th>User</th>
-    <th>User name</th>
+    <th>Power</th>
+    <th>Type</th>
+    <th>Heli kit</th>
+    <th>Elec motor</th>
+    <th>Engine</th>
+    <th>Exhaust</th>
+    <th>Speed control</th>
+    <th>Cyclic servo</th>
+    <th>Rudder servo</th>
+    <th>Throttle servo</th>
+    <th>Rudder gyro</th>
+    <th>Fbl unit</th>
+    <th>Receiver</th>
+    <th>Governor</th>
+    <th>Main blade</th>
+    <th>Tail blade</th>
+    <th>Paddle</th>
     <th></th>
     <th></th>
     <th></th>
@@ -12,7 +28,23 @@
 <% @projects.each do |project| %>
   <tr>
     <td><%= project.user_id %></td>
-    <td><%= project.user_name %></td>
+    <td><%= project.power %></td>
+    <td><%= project.type %></td>
+    <td><%= project.heli_kit %></td>
+    <td><%= project.elec_motor %></td>
+    <td><%= project.engine %></td>
+    <td><%= project.exhaust %></td>
+    <td><%= project.speed_control %></td>
+    <td><%= project.cyclic_servo %></td>
+    <td><%= project.rudder_servo %></td>
+    <td><%= project.throttle_servo %></td>
+    <td><%= project.rudder_gyro %></td>
+    <td><%= project.fbl_unit %></td>
+    <td><%= project.receiver %></td>
+    <td><%= project.governor %></td>
+    <td><%= project.main_blade %></td>
+    <td><%= project.tail_blade %></td>
+    <td><%= project.paddle %></td>
     <td><%= link_to 'Show', project %></td>
     <td><%= link_to 'Edit', edit_project_path(project) %></td>
     <td><%= link_to 'Destroy', project, confirm: 'Are you sure?', method: :delete %></td>

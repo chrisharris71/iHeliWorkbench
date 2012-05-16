@@ -14,7 +14,7 @@
 
       <%= f.input :password_confirmation %>
 			<% if current_user.admin? && !current_user?(user) %>
-				<%= f.input :admin, :collection => [:t, :f] %>
+				<%= f.input :admin, :collection => [:True, :False] %>
 			<% end %>
       <%= f.submit "Register >>", class: "btn btn-large btn-primary create" %>
     <% end %>

@@ -1,6 +1,4 @@
-SampleApp::Application.routes.draw do
-  
-  resources :paddles
+SampleApp::Application.routes.draw do  resources :paddles
   resources :tail_blades
   resources :receivers
   resources :governors
@@ -10,9 +8,7 @@ SampleApp::Application.routes.draw do
   resources :rudder_servos
   resources :cyclic_servos
   resources :speed_controls
-  resources :exhausts
-  resources :projects
-  resources :main_blades
+  resources :exhausts  
   resources :engines
   resources :elec_motors
   resources :heli_kits
@@ -20,6 +16,7 @@ SampleApp::Application.routes.draw do
   resources :users
   resources :admin 
  	resources :sizes
+ 	resources :projects
  	resources :sessions, only: [:new, :create, :destroy]
 
   root to: 'static_pages#home'
@@ -32,7 +29,7 @@ SampleApp::Application.routes.draw do
   match '/about',   to: 'static_pages#about'
   match '/contact', to: 'static_pages#contact'
   match '/admin',		to: 'admin#index' 
-  
+  match '/projects',	to: 'projects#index'
 	
 	
   # The priority is based upon order of creation:
