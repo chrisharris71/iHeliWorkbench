@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120516005015) do
+ActiveRecord::Schema.define(:version => 20120516150422) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -159,9 +159,25 @@ ActiveRecord::Schema.define(:version => 20120516005015) do
   create_table "projects", :force => true do |t|
     t.integer  "user_id"
     t.string   "user_name"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+    t.string   "heli_kit"
+    t.string   "power"
     t.string   "type"
+    t.string   "elec_motor"
+    t.string   "engine"
+    t.string   "exhaust"
+    t.string   "speed_control"
+    t.string   "cyclic_servo"
+    t.string   "rudder_servo"
+    t.string   "throttle_servo"
+    t.string   "rudder_gyro"
+    t.string   "fbl_unit"
+    t.string   "receiver"
+    t.string   "governor"
+    t.string   "main_blade"
+    t.string   "tail_blade"
+    t.string   "paddle"
   end
 
   create_table "receivers", :force => true do |t|

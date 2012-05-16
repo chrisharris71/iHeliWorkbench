@@ -1,5 +1,6 @@
 class Project < ActiveRecord::Base
-  attr_accessible :user_id, :user_name
+  attr_accessible :user_id, :user_name, :type, :engine, :power, :main_blade, :heli_kit, :exhaust, :elec_motor, :speed_control, :cyclic_servo, :rudder_servo, :throttle_servo, :rudder_gyro, :fbl_unit, :governor, :tail_blade, :paddle, :receiver
+  
   belongs_to :user
   has_one :engine, :dependent => :destroy
   has_one :main_blade, :dependent => :destroy

@@ -1,22 +1,21 @@
+<% current_user = @user %>
 <%= provide(:title, 'Sign up') %>
 <div class="row">
 	<%= render 'sign_in' %>
   <div class="span5 form2">
   	<h2>Register a new account</h2>
-    <%= form_for(@user) do |f| %>
+    <%= simple_form_for(@user) do |f| %>
 			<%= render 'shared/error_messages' %>
-      <%= f.label :name %>
-      <%= f.text_field :name %>
+      <%= f.input :name %>
+      
+      <%= f.input :email %>
 
-      <%= f.label :email %>
-      <%= f.text_field :email %>
+      <%= f.input :password %>
 
-      <%= f.label :password %>
-      <%= f.password_field :password %>
-
-      <%= f.label :password_confirmation, "Confirmation" %>
-      <%= f.password_field :password_confirmation %>
-
+      <%= f.input :password_confirmation %>
+			<% if current_user.admin? && !current_user?(user) %>
+				<%= f.input :admin, :collection => [:t, :f] %>
+			<% end %>
       <%= f.submit "Register >>", class: "btn btn-large btn-primary create" %>
     <% end %>
   </div>
