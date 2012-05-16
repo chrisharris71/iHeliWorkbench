@@ -20,6 +20,10 @@ body	{
 	line-height: 14px;
 }
 
+li{
+	line-height: 14px;
+}
+
 .container	{
 	width: 100%;
 }
@@ -148,18 +152,22 @@ div#main_nav	{
 	border-bottom: 3px solid #3299bb;
 }
 
-#main_nav li > a:hover, .dropdown-menu .active > a, .dropdown-menu .active > a:hover {
+.dropdown-menu li > a:hover, .dropdown-menu .active > a, .dropdown-menu .active > a:hover {
   background-color: white;
-/*   border-bottom: none; */
   text-decoration: none;
   
 }
 
 .dropdown-menu {
-	min-width: 80px;
-	padding: 0px;
-	a	{
-	padding: 0px;
+	min-width: 90px;
+	min-height: 100px;
+	padding: 5px;
+		a	{
+			padding: 0px;
+			margin-bottom: 5px;	
+		li{
+					
+		}
 	}
 }
 
@@ -251,6 +259,7 @@ div#main_nav	{
 	margin-top: 30px;
 	padding-left: 20px;
 	padding-right: 50px;
+	margin-bottom: 40px;
 }
 
 
@@ -262,6 +271,10 @@ div#main_nav	{
 
 .row .form3 > img a	{
 	padding-left: 15px;
+}
+
+.form_back a{
+	padding-left: 30px;
 }
 
 .product_index	{

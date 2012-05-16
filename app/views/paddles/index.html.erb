@@ -1,0 +1,29 @@
+<h1>Listing paddles</h1>
+
+<table>
+  <tr>
+    <th>Part number</th>
+    <th>Paddle length</th>
+    <th>Size</th>
+    <th>Manufacturer</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @paddles.each do |paddle| %>
+  <tr>
+    <td><%= paddle.part_number %></td>
+    <td><%= paddle.paddle_length %></td>
+    <td><%= paddle.size %></td>
+    <td><%= paddle.manufacturer_id %></td>
+    <td><%= link_to 'Show', paddle %></td>
+    <td><%= link_to 'Edit', edit_paddle_path(paddle) %></td>
+    <td><%= link_to 'Destroy', paddle, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Paddle', new_paddle_path %>

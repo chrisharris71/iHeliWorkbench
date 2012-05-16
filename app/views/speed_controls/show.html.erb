@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Part number:</b>
+  <%= @speed_control.part_number %>
+</p>
+
+<p>
+  <b>Amp rating:</b>
+  <%= @speed_control.amp_rating %>
+</p>
+
+<p>
+  <b>Size:</b>
+  <%= @speed_control.size %>
+</p>
+
+<p>
+  <b>Manufacturer:</b>
+  <%= @speed_control.manufacturer_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_speed_control_path(@speed_control) %> |
+<%= link_to 'Back', speed_controls_path %>

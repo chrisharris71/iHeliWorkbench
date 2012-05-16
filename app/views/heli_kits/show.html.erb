@@ -1,30 +1,29 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <b>Name:</b>
-  <%= @heli_kit.name %>
-</p>
-
-<p>
-  <b>Part number:</b>
-  <%= @heli_kit.part_number %>
-</p>
-
-<p>
-  <b>Size:</b>
-  <%= @heli_kit.size %>
-</p>
-
-<p>
-  <b>Power:</b>
-  <%= @heli_kit.power %>
-</p>
-
-<p>
-  <b>Manufacturer:</b>
-  <%= @heli_kit.manufacturer.name %>
-</p>
-
-
-<%= link_to 'Edit', edit_heli_kit_path(@heli_kit) %> |
-<%= link_to 'Back', heli_kits_path %>
+<div class="row">
+	<div>
+		<p id="notice"><%= notice %></p>
+		<p>
+		  <h3 class="offset_1">Name: <%= @heli_kit.name %></h3>
+		</p>
+		<hr />
+		<p>
+		  <b>Part number:</b>
+		  <%= @heli_kit.part_number %>
+		</p>
+		<p>
+		  <b>Size:</b>
+		  <%= @heli_kit.size.name %>
+		</p>
+		<p>
+		  <b>Power:</b>
+		  <%= @heli_kit.power %>
+		</p>
+		<p>
+		  <b>Manufacturer:</b>
+		  <%= @heli_kit.manufacturer.name %>
+		</p>
+		<hr />
+		<%= link_to 'Edit', edit_heli_kit_path(@heli_kit) %> |
+		<%= link_to 'Back', heli_kits_path %>
+		<p></p>
+	</div>
+</div>

@@ -1,0 +1,27 @@
+<h1>Listing rudder_gyros</h1>
+
+<table>
+  <tr>
+    <th>Part number</th>
+    <th>Size</th>
+    <th>Manufacturer</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @rudder_gyros.each do |rudder_gyro| %>
+  <tr>
+    <td><%= rudder_gyro.part_number %></td>
+    <td><%= rudder_gyro.size %></td>
+    <td><%= rudder_gyro.manufacturer_id %></td>
+    <td><%= link_to 'Show', rudder_gyro %></td>
+    <td><%= link_to 'Edit', edit_rudder_gyro_path(rudder_gyro) %></td>
+    <td><%= link_to 'Destroy', rudder_gyro, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Rudder gyro', new_rudder_gyro_path %>

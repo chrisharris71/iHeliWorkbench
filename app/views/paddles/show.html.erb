@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Part number:</b>
+  <%= @paddle.part_number %>
+</p>
+
+<p>
+  <b>Paddle length:</b>
+  <%= @paddle.paddle_length %>
+</p>
+
+<p>
+  <b>Size:</b>
+  <%= @paddle.size %>
+</p>
+
+<p>
+  <b>Manufacturer:</b>
+  <%= @paddle.manufacturer_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_paddle_path(@paddle) %> |
+<%= link_to 'Back', paddles_path %>

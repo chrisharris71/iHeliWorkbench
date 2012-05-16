@@ -1,15 +1,12 @@
-<div class="row">
-	<div>
-		<h2>Add new helicopter kit</h2>
-		<%= simple_form_for @heli_kit, :html => {:class => 'form'} do |f| %>
-		  <%= f.input :name %>
-		  <%= f.input :part_number %>
-		  <%= f.input :size %>
-		  <%= f.input :power %>
-		  <%= f.input :manufacturer_id %>
-		  <%= f.button :submit %>
-		<% end %>
+<div class="form_back">
+	<%= simple_form_for @heli_kit, :html => {:class => 'form4'} do |f| %>
+	  <%= f.input :name %>
+	  <%= f.input :part_number %>
+	  <%= f.association :size, :prompt => "Choose a Category" %>
+	  <%= f.input :power, :collection => [:Electric, :Fuel], :prompt => "Choose a Power Source"  %>
+	  <%= f.association :manufacturer, :prompt => "Choose a Manufacturer"  %>
+	  <%= f.button :submit %>
 		<%= link_to 'Back', heli_kits_path %>
-	</div>
-	
+	<% end %>
 </div>
+	

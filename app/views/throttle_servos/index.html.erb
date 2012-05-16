@@ -1,0 +1,31 @@
+<h1>Listing throttle_servos</h1>
+
+<table>
+  <tr>
+    <th>Part number</th>
+    <th>Max torque</th>
+    <th>Max speed</th>
+    <th>Size</th>
+    <th>Manufacturer</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @throttle_servos.each do |throttle_servo| %>
+  <tr>
+    <td><%= throttle_servo.part_number %></td>
+    <td><%= throttle_servo.max_torque %></td>
+    <td><%= throttle_servo.max_speed %></td>
+    <td><%= throttle_servo.size %></td>
+    <td><%= throttle_servo.manufacturer_id %></td>
+    <td><%= link_to 'Show', throttle_servo %></td>
+    <td><%= link_to 'Edit', edit_throttle_servo_path(throttle_servo) %></td>
+    <td><%= link_to 'Destroy', throttle_servo, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Throttle servo', new_throttle_servo_path %>

@@ -1,0 +1,35 @@
+<h1>Listing receivers</h1>
+
+<table>
+  <tr>
+    <th>Part number</th>
+    <th>Size</th>
+    <th>Channels</th>
+    <th>Has gov</th>
+    <th>Has fbl unit</th>
+    <th>Has volt reg</th>
+    <th>Manufacturer</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @receivers.each do |receiver| %>
+  <tr>
+    <td><%= receiver.part_number %></td>
+    <td><%= receiver.size %></td>
+    <td><%= receiver.channels %></td>
+    <td><%= receiver.has_gov %></td>
+    <td><%= receiver.has_fbl_unit %></td>
+    <td><%= receiver.has_volt_reg %></td>
+    <td><%= receiver.manufacturer_id %></td>
+    <td><%= link_to 'Show', receiver %></td>
+    <td><%= link_to 'Edit', edit_receiver_path(receiver) %></td>
+    <td><%= link_to 'Destroy', receiver, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Receiver', new_receiver_path %>

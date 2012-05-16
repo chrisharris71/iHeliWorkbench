@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Part number:</b>
+  <%= @rudder_gyro.part_number %>
+</p>
+
+<p>
+  <b>Size:</b>
+  <%= @rudder_gyro.size %>
+</p>
+
+<p>
+  <b>Manufacturer:</b>
+  <%= @rudder_gyro.manufacturer_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_rudder_gyro_path(@rudder_gyro) %> |
+<%= link_to 'Back', rudder_gyros_path %>

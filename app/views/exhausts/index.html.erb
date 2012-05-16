@@ -1,0 +1,29 @@
+<h1>Listing exhausts</h1>
+
+<table>
+  <tr>
+    <th>Part number</th>
+    <th>Size</th>
+    <th>Works with</th>
+    <th>Manufacturer</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @exhausts.each do |exhaust| %>
+  <tr>
+    <td><%= exhaust.part_number %></td>
+    <td><%= exhaust.size %></td>
+    <td><%= exhaust.works_with %></td>
+    <td><%= exhaust.manufacturer_id %></td>
+    <td><%= link_to 'Show', exhaust %></td>
+    <td><%= link_to 'Edit', edit_exhaust_path(exhaust) %></td>
+    <td><%= link_to 'Destroy', exhaust, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Exhaust', new_exhaust_path %>

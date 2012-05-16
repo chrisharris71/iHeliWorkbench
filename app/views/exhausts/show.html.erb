@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Part number:</b>
+  <%= @exhaust.part_number %>
+</p>
+
+<p>
+  <b>Size:</b>
+  <%= @exhaust.size %>
+</p>
+
+<p>
+  <b>Works with:</b>
+  <%= @exhaust.works_with %>
+</p>
+
+<p>
+  <b>Manufacturer:</b>
+  <%= @exhaust.manufacturer_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_exhaust_path(@exhaust) %> |
+<%= link_to 'Back', exhausts_path %>

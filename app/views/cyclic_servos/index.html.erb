@@ -1,0 +1,31 @@
+<h1>Listing cyclic_servos</h1>
+
+<table>
+  <tr>
+    <th>Part number</th>
+    <th>Max torque</th>
+    <th>Max speed</th>
+    <th>Size</th>
+    <th>Manufacturer</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @cyclic_servos.each do |cyclic_servo| %>
+  <tr>
+    <td><%= cyclic_servo.part_number %></td>
+    <td><%= cyclic_servo.max_torque %></td>
+    <td><%= cyclic_servo.max_speed %></td>
+    <td><%= cyclic_servo.size %></td>
+    <td><%= cyclic_servo.manufacturer_id %></td>
+    <td><%= link_to 'Show', cyclic_servo %></td>
+    <td><%= link_to 'Edit', edit_cyclic_servo_path(cyclic_servo) %></td>
+    <td><%= link_to 'Destroy', cyclic_servo, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Cyclic servo', new_cyclic_servo_path %>

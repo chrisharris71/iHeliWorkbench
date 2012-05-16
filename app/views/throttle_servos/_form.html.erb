@@ -1,0 +1,15 @@
+<%= simple_form_for(@throttle_servo) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :part_number %>
+    <%= f.input :max_torque %>
+    <%= f.input :max_speed %>
+    <%= f.input :size %>
+    <%= f.input :manufacturer_id %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

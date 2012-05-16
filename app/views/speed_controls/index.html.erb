@@ -1,0 +1,29 @@
+<h1>Listing speed_controls</h1>
+
+<table>
+  <tr>
+    <th>Part number</th>
+    <th>Amp rating</th>
+    <th>Size</th>
+    <th>Manufacturer</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @speed_controls.each do |speed_control| %>
+  <tr>
+    <td><%= speed_control.part_number %></td>
+    <td><%= speed_control.amp_rating %></td>
+    <td><%= speed_control.size %></td>
+    <td><%= speed_control.manufacturer_id %></td>
+    <td><%= link_to 'Show', speed_control %></td>
+    <td><%= link_to 'Edit', edit_speed_control_path(speed_control) %></td>
+    <td><%= link_to 'Destroy', speed_control, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Speed control', new_speed_control_path %>

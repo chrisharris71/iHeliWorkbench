@@ -1,5 +1,16 @@
 SampleApp::Application.routes.draw do
   
+  resources :paddles
+  resources :tail_blades
+  resources :receivers
+  resources :governors
+  resources :fbl_units
+  resources :rudder_gyros
+  resources :throttle_servos
+  resources :rudder_servos
+  resources :cyclic_servos
+  resources :speed_controls
+  resources :exhausts
   resources :projects
   resources :main_blades
   resources :engines
@@ -8,7 +19,7 @@ SampleApp::Application.routes.draw do
   resources :manufacturers
   resources :users
   resources :admin 
- 	
+ 	resources :sizes
  	resources :sessions, only: [:new, :create, :destroy]
 
   root to: 'static_pages#home'

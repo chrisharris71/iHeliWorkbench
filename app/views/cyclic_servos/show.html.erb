@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Part number:</b>
+  <%= @cyclic_servo.part_number %>
+</p>
+
+<p>
+  <b>Max torque:</b>
+  <%= @cyclic_servo.max_torque %>
+</p>
+
+<p>
+  <b>Max speed:</b>
+  <%= @cyclic_servo.max_speed %>
+</p>
+
+<p>
+  <b>Size:</b>
+  <%= @cyclic_servo.size %>
+</p>
+
+<p>
+  <b>Manufacturer:</b>
+  <%= @cyclic_servo.manufacturer_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_cyclic_servo_path(@cyclic_servo) %> |
+<%= link_to 'Back', cyclic_servos_path %>

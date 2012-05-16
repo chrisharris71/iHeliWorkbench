@@ -1,0 +1,29 @@
+<h1>Listing tail_blades</h1>
+
+<table>
+  <tr>
+    <th>Part number</th>
+    <th>Blade length</th>
+    <th>Size</th>
+    <th>Manufacturer</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @tail_blades.each do |tail_blade| %>
+  <tr>
+    <td><%= tail_blade.part_number %></td>
+    <td><%= tail_blade.blade_length %></td>
+    <td><%= tail_blade.size %></td>
+    <td><%= tail_blade.manufacturer_id %></td>
+    <td><%= link_to 'Show', tail_blade %></td>
+    <td><%= link_to 'Edit', edit_tail_blade_path(tail_blade) %></td>
+    <td><%= link_to 'Destroy', tail_blade, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Tail blade', new_tail_blade_path %>

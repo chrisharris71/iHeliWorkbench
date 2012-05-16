@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Part number:</b>
+  <%= @governor.part_number %>
+</p>
+
+<p>
+  <b>Size:</b>
+  <%= @governor.size %>
+</p>
+
+<p>
+  <b>Manufacturer:</b>
+  <%= @governor.manufacturer_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_governor_path(@governor) %> |
+<%= link_to 'Back', governors_path %>

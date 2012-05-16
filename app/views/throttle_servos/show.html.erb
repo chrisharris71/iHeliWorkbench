@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Part number:</b>
+  <%= @throttle_servo.part_number %>
+</p>
+
+<p>
+  <b>Max torque:</b>
+  <%= @throttle_servo.max_torque %>
+</p>
+
+<p>
+  <b>Max speed:</b>
+  <%= @throttle_servo.max_speed %>
+</p>
+
+<p>
+  <b>Size:</b>
+  <%= @throttle_servo.size %>
+</p>
+
+<p>
+  <b>Manufacturer:</b>
+  <%= @throttle_servo.manufacturer_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_throttle_servo_path(@throttle_servo) %> |
+<%= link_to 'Back', throttle_servos_path %>

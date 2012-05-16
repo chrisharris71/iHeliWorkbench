@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Part number:</b>
+  <%= @receiver.part_number %>
+</p>
+
+<p>
+  <b>Size:</b>
+  <%= @receiver.size %>
+</p>
+
+<p>
+  <b>Channels:</b>
+  <%= @receiver.channels %>
+</p>
+
+<p>
+  <b>Has gov:</b>
+  <%= @receiver.has_gov %>
+</p>
+
+<p>
+  <b>Has fbl unit:</b>
+  <%= @receiver.has_fbl_unit %>
+</p>
+
+<p>
+  <b>Has volt reg:</b>
+  <%= @receiver.has_volt_reg %>
+</p>
+
+<p>
+  <b>Manufacturer:</b>
+  <%= @receiver.manufacturer_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_receiver_path(@receiver) %> |
+<%= link_to 'Back', receivers_path %>

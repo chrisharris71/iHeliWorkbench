@@ -1,0 +1,27 @@
+<h1>Listing governors</h1>
+
+<table>
+  <tr>
+    <th>Part number</th>
+    <th>Size</th>
+    <th>Manufacturer</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @governors.each do |governor| %>
+  <tr>
+    <td><%= governor.part_number %></td>
+    <td><%= governor.size %></td>
+    <td><%= governor.manufacturer_id %></td>
+    <td><%= link_to 'Show', governor %></td>
+    <td><%= link_to 'Edit', edit_governor_path(governor) %></td>
+    <td><%= link_to 'Destroy', governor, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Governor', new_governor_path %>

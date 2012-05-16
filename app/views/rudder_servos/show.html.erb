@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Part number:</b>
+  <%= @rudder_servo.part_number %>
+</p>
+
+<p>
+  <b>Max torque:</b>
+  <%= @rudder_servo.max_torque %>
+</p>
+
+<p>
+  <b>Max speed:</b>
+  <%= @rudder_servo.max_speed %>
+</p>
+
+<p>
+  <b>Size:</b>
+  <%= @rudder_servo.size %>
+</p>
+
+<p>
+  <b>Manufacturer:</b>
+  <%= @rudder_servo.manufacturer_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_rudder_servo_path(@rudder_servo) %> |
+<%= link_to 'Back', rudder_servos_path %>

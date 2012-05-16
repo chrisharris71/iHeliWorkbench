@@ -1,0 +1,14 @@
+<%= simple_form_for(@speed_control) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :part_number %>
+    <%= f.input :amp_rating %>
+    <%= f.input :size %>
+    <%= f.input :manufacturer_id %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

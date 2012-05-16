@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Part number:</b>
+  <%= @fbl_unit.part_number %>
+</p>
+
+<p>
+  <b>Size:</b>
+  <%= @fbl_unit.size %>
+</p>
+
+<p>
+  <b>Manufacturer:</b>
+  <%= @fbl_unit.manufacturer_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_fbl_unit_path(@fbl_unit) %> |
+<%= link_to 'Back', fbl_units_path %>

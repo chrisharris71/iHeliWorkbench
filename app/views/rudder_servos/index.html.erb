@@ -1,0 +1,31 @@
+<h1>Listing rudder_servos</h1>
+
+<table>
+  <tr>
+    <th>Part number</th>
+    <th>Max torque</th>
+    <th>Max speed</th>
+    <th>Size</th>
+    <th>Manufacturer</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @rudder_servos.each do |rudder_servo| %>
+  <tr>
+    <td><%= rudder_servo.part_number %></td>
+    <td><%= rudder_servo.max_torque %></td>
+    <td><%= rudder_servo.max_speed %></td>
+    <td><%= rudder_servo.size %></td>
+    <td><%= rudder_servo.manufacturer_id %></td>
+    <td><%= link_to 'Show', rudder_servo %></td>
+    <td><%= link_to 'Edit', edit_rudder_servo_path(rudder_servo) %></td>
+    <td><%= link_to 'Destroy', rudder_servo, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Rudder servo', new_rudder_servo_path %>
