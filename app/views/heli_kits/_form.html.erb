@@ -6,7 +6,7 @@
 	  <%= f.input :power, :collection => [:Electric, :Fuel], :prompt => "Choose a Power Source"  %>
 	  <%= f.association :manufacturer, :prompt => "Choose a Manufacturer"  %>
 	  <%= f.button :submit %>
-		<%= link_to 'Back', heli_kits_path %>
 	<% end %>
+	<%= link_to 'Back', heli_kits_path %>
 </div>
 	

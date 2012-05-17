@@ -1,4 +1,6 @@
 SampleApp::Application.routes.draw do  resources :paddles
+  
+  resources :main_blades
   resources :tail_blades
   resources :receivers
   resources :governors

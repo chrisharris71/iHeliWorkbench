@@ -1,10 +1,9 @@
-<h1>Listing projects</h1>
+<h2>My Helicopter Projects</h2>
 
 <table>
   <tr>
-    <th>User</th>
-    <th>Power</th>
-    <th>Type</th>
+    <th>Electric?</th>
+    <th>Flybarless?</th>
     <th>Heli kit</th>
     <th>Elec motor</th>
     <th>Engine</th>
@@ -27,24 +26,23 @@
 
 <% @projects.each do |project| %>
   <tr>
-    <td><%= project.user_id %></td>
-    <td><%= project.power %></td>
-    <td><%= project.type %></td>
-    <td><%= project.heli_kit %></td>
-    <td><%= project.elec_motor %></td>
-    <td><%= project.engine %></td>
-    <td><%= project.exhaust %></td>
-    <td><%= project.speed_control %></td>
-    <td><%= project.cyclic_servo %></td>
-    <td><%= project.rudder_servo %></td>
-    <td><%= project.throttle_servo %></td>
-    <td><%= project.rudder_gyro %></td>
-    <td><%= project.fbl_unit %></td>
-    <td><%= project.receiver %></td>
-    <td><%= project.governor %></td>
-    <td><%= project.main_blade %></td>
-    <td><%= project.tail_blade %></td>
-    <td><%= project.paddle %></td>
+    <td><%= project.electric %></td>
+    <td><%= project.flybarless %></td>
+    <td><%= project.heli_kit_id %></td>
+    <td><%= project.elec_motor_id %></td>
+    <td><%= project.engine_id %></td>
+    <td><%= project.exhaust_id %></td>
+    <td><%= project.speed_control_id %></td>
+    <td><%= project.cyclic_servo_id %></td>
+    <td><%= project.rudder_servo_id %></td>
+    <td><%= project.throttle_servo_id %></td>
+    <td><%= project.rudder_gyro_id %></td>
+    <td><%= project.fbl_unit_id %></td>
+    <td><%= project.receiver_id %></td>
+    <td><%= project.governor_id %></td>
+    <td><%= project.main_blade_id %></td>
+    <td><%= project.tail_blade_id %></td>
+    <td><%= project.paddle_id %></td>
     <td><%= link_to 'Show', project %></td>
     <td><%= link_to 'Edit', edit_project_path(project) %></td>
     <td><%= link_to 'Destroy', project, confirm: 'Are you sure?', method: :delete %></td>

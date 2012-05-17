@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120516155945) do
+ActiveRecord::Schema.define(:version => 20120517114430) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -60,6 +60,7 @@ ActiveRecord::Schema.define(:version => 20120516155945) do
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
     t.integer  "size_id"
+    t.string   "name"
   end
 
   create_table "elec_motors", :force => true do |t|
@@ -69,6 +70,7 @@ ActiveRecord::Schema.define(:version => 20120516155945) do
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
     t.integer  "size_id"
+    t.string   "name"
   end
 
   create_table "engines", :force => true do |t|
@@ -78,6 +80,7 @@ ActiveRecord::Schema.define(:version => 20120516155945) do
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
     t.integer  "size_id"
+    t.string   "name"
   end
 
   create_table "exhausts", :force => true do |t|
@@ -88,6 +91,7 @@ ActiveRecord::Schema.define(:version => 20120516155945) do
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
     t.integer  "size_id"
+    t.string   "name"
   end
 
   create_table "fbl_units", :force => true do |t|
@@ -97,6 +101,7 @@ ActiveRecord::Schema.define(:version => 20120516155945) do
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
     t.integer  "size_id"
+    t.string   "name"
   end
 
   create_table "governors", :force => true do |t|
@@ -106,6 +111,7 @@ ActiveRecord::Schema.define(:version => 20120516155945) do
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
     t.integer  "size_id"
+    t.string   "name"
   end
 
   create_table "heli_kits", :force => true do |t|
@@ -129,6 +135,7 @@ ActiveRecord::Schema.define(:version => 20120516155945) do
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
     t.integer  "size_id"
+    t.string   "name"
   end
 
   create_table "manufacturers", :force => true do |t|
@@ -154,29 +161,30 @@ ActiveRecord::Schema.define(:version => 20120516155945) do
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
     t.integer  "size_id"
+    t.string   "name"
   end
 
   create_table "projects", :force => true do |t|
     t.integer  "user_id"
-    t.string   "power"
-    t.string   "type"
-    t.string   "heli_kit"
-    t.string   "elec_motor"
-    t.string   "engine"
-    t.string   "exhaust"
-    t.string   "speed_control"
-    t.string   "cyclic_servo"
-    t.string   "rudder_servo"
-    t.string   "throttle_servo"
-    t.string   "rudder_gyro"
-    t.string   "fbl_unit"
-    t.string   "receiver"
-    t.string   "governor"
-    t.string   "main_blade"
-    t.string   "tail_blade"
-    t.string   "paddle"
-    t.datetime "created_at",     :null => false
-    t.datetime "updated_at",     :null => false
+    t.boolean  "electric"
+    t.boolean  "flybarless"
+    t.string   "heli_kit_id"
+    t.string   "elec_motor_id"
+    t.string   "engine_id"
+    t.string   "exhaust_id"
+    t.string   "speed_control_id"
+    t.string   "cyclic_servo_id"
+    t.string   "rudder_servo_id"
+    t.string   "throttle_servo_id"
+    t.string   "rudder_gyro_id"
+    t.string   "fbl_unit_id"
+    t.string   "receiver_id"
+    t.string   "governor_id"
+    t.string   "main_blade_id"
+    t.string   "tail_blade_id"
+    t.string   "paddle_id"
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
   end
 
   create_table "receivers", :force => true do |t|
@@ -190,6 +198,7 @@ ActiveRecord::Schema.define(:version => 20120516155945) do
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
     t.integer  "size_id"
+    t.string   "name"
   end
 
   create_table "rudder_gyros", :force => true do |t|
@@ -199,6 +208,7 @@ ActiveRecord::Schema.define(:version => 20120516155945) do
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
     t.integer  "size_id"
+    t.string   "name"
   end
 
   create_table "rudder_servos", :force => true do |t|
@@ -210,6 +220,7 @@ ActiveRecord::Schema.define(:version => 20120516155945) do
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
     t.integer  "size_id"
+    t.string   "name"
   end
 
   create_table "sizes", :force => true do |t|
@@ -226,6 +237,7 @@ ActiveRecord::Schema.define(:version => 20120516155945) do
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
     t.integer  "size_id"
+    t.string   "name"
   end
 
   create_table "tail_blades", :force => true do |t|
@@ -236,6 +248,7 @@ ActiveRecord::Schema.define(:version => 20120516155945) do
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
     t.integer  "size_id"
+    t.string   "name"
   end
 
   create_table "throttle_servos", :force => true do |t|
@@ -247,6 +260,7 @@ ActiveRecord::Schema.define(:version => 20120516155945) do
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
     t.integer  "size_id"
+    t.string   "name"
   end
 
   create_table "users", :force => true do |t|

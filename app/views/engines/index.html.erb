@@ -14,7 +14,7 @@
   <tr>
     <td><%= engine.part_number %></td>
     <td><%= engine.size %></td>
-    <td><%= engine.manufacturer_id %></td>
+    <td><%= engine.manufacturer.name %></td>
     <td><%= link_to 'Show', engine %></td>
     <td><%= link_to 'Edit', edit_engine_path(engine) %></td>
     <td><%= link_to 'Destroy', engine, confirm: 'Are you sure?', method: :delete %></td>

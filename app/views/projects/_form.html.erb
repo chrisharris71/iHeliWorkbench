@@ -3,23 +3,23 @@
 	  <%= f.error_notification %>
 	    <h2><%= current_user.name %>'s New Heli Project</h2>
 	    <%= f.input :user_id, :placeholder => current_user.name %>
-	    <%= f.input :power, :collection => [:Electric, :Nitro], :as => :radio_buttons %>
-	    <%= f.input :type, :collection => [:'Flybarred Helicopter', :'Flybarless Helicopter'], :as => :radio_buttons %>
-	    <%= f.input :heli_kit_id %>
-	    <%= f.input :elec_motor %>
-	    <%= f.input :engine %>
-	    <%= f.input :exhaust %>
-	    <%= f.input :speed_control %>
-	    <%= f.input :cyclic_servo %>
-	    <%= f.input :rudder_servo %>
-	    <%= f.input :throttle_servo %>
-	    <%= f.input :rudder_gyro %>
-	    <%= f.input :fbl_unit %>
-	    <%= f.input :receiver %>
-	    <%= f.input :governor %>
-	    <%= f.input :main_blade %>
-	    <%= f.input :tail_blade %>
-	    <%= f.input :paddle %>
+	    <%= f.input :electric, :as => :radio_buttons %>
+	    <%= f.input :flybarless, :as => :radio_buttons %>
+	    <%= f.input :heli_kit_id, :collection => HeliKit.all, :prompt => 'Choose a Helicopter Kit' %>
+	    <%= f.input :elec_motor_id, :collection => ElecMotor.all, :prompt => 'Choose an Electric Motor' %>
+	    <%= f.input :engine_id, :collection => Engine.all, :prompt => 'Choose an Engine' %>
+	    <%= f.input :exhaust_id, :collection => Exhaust.all, :prompt => 'Choose an Exhaust' %>
+	    <%= f.input :speed_control_id, :collection => SpeedControl.all, :prompt => 'Choose a Speed Controller' %>
+	    <%= f.input :cyclic_servo_id, :collection => CyclicServo.all, :prompt => 'Choose Cyclic Servos' %>
+	    <%= f.input :rudder_servo_id, :collection => RudderServo.all, :prompt => 'Choose a Rudder Servo' %>
+	    <%= f.input :throttle_servo_id, :collection => ThrottleServo.all, :prompt => 'Choose a Throttle Servo' %>
+	    <%= f.input :rudder_gyro_id, :collection => RudderGyro.all, :prompt => 'Choose a Rudder Gyro' %>
+	    <%= f.input :fbl_unit_id, :collection => FblUnit.all, :prompt => 'Choose a Flybarless Controller' %>
+	    <%= f.input :receiver_id, :collection => Receiver.all, :prompt => 'Choose a Receiver' %>
+	    <%= f.input :governor_id, :collection => Governor.all, :prompt => 'Choose a Governor' %>
+	    <%= f.input :main_blade_id, :collection => MainBlade.all, :prompt => 'Choose Main Blades' %>
+	    <%= f.input :tail_blade_id, :collection => TailBlade.all, :prompt => 'Choose Tail Blades' %>
+	    <%= f.input :paddle_id, :collection => Paddle.all, :prompt => 'Choose Paddles' %>
 	    <%= f.submit "Create Project >> ", class: "btn btn-large btn-primary create2" %>	  
 	  <%= link_to 'Back', projects_path %>
 	<% end %>
