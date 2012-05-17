@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120517114430) do
+ActiveRecord::Schema.define(:version => 20120517150240) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -168,21 +168,21 @@ ActiveRecord::Schema.define(:version => 20120517114430) do
     t.integer  "user_id"
     t.boolean  "electric"
     t.boolean  "flybarless"
-    t.string   "heli_kit_id"
-    t.string   "elec_motor_id"
-    t.string   "engine_id"
-    t.string   "exhaust_id"
-    t.string   "speed_control_id"
-    t.string   "cyclic_servo_id"
-    t.string   "rudder_servo_id"
-    t.string   "throttle_servo_id"
-    t.string   "rudder_gyro_id"
-    t.string   "fbl_unit_id"
-    t.string   "receiver_id"
-    t.string   "governor_id"
-    t.string   "main_blade_id"
-    t.string   "tail_blade_id"
-    t.string   "paddle_id"
+    t.integer  "heli_kit_id"
+    t.integer  "elec_motor_id"
+    t.integer  "engine_id"
+    t.integer  "exhaust_id"
+    t.integer  "speed_control_id"
+    t.integer  "cyclic_servo_id"
+    t.integer  "rudder_servo_id"
+    t.integer  "throttle_servo_id"
+    t.integer  "rudder_gyro_id"
+    t.integer  "fbl_unit_id"
+    t.integer  "receiver_id"
+    t.integer  "governor_id"
+    t.integer  "main_blade_id"
+    t.integer  "tail_blade_id"
+    t.integer  "paddle_id"
     t.datetime "created_at",        :null => false
     t.datetime "updated_at",        :null => false
   end
