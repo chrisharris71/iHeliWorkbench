@@ -2,7 +2,7 @@ class ProjectsController < ApplicationController
   # GET /projects
   # GET /projects.json
   def index
-    @projects = Project.all
+    @projects = Project.order("name").page(params[:page]).per_page(1)
 
     respond_to do |format|
       format.html # index.html.erb

@@ -1,56 +1,27 @@
-<h2>My Helicopter Projects</h2>
-
-<table>
-  <tr>
-    <th>Electric?</th>
-    <th>Flybarless?</th>
-    <th>Heli kit</th>
-    <th>Elec motor</th>
-    <th>Engine</th>
-    <th>Exhaust</th>
-    <th>Speed control</th>
-    <th>Cyclic servo</th>
-    <th>Rudder servo</th>
-    <th>Throttle servo</th>
-    <th>Rudder gyro</th>
-    <th>Fbl unit</th>
-    <th>Receiver</th>
-    <th>Governor</th>
-    <th>Main blade</th>
-    <th>Tail blade</th>
-    <th>Paddle</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<h2>All Helicopter Projects</h2>
 
 <% @projects.each do |project| %>
-  <tr>
-    <td><%= project.user %></td>
-    <td><%= project.electric %></td>
-    <td><%= project.flybarless %></td>
-    <td><%= project.heli_kit.try(:name) %></td>
-		<td><%= project.elec_motor.try(:name) %></td>
-		<td><%= project.engine.try(:name) %></td>
-		<td><%= project.exhaust.try(:name) %></td>
-		<td><%= project.speed_control.try(:name) %></td>
-		<td><%= project.cyclic_servo.try(:name) %></td>
-		<td><%= project.rudder_servo.try(:name) %></td>
-		<td><%= project.throttle_servo.try(:name) %></td>
-		<td><%= project.rudder_gyro.try(:name) %></td>
-		<td><%= project.fbl_unit.try(:name) %></td>
-		<td><%= project.receiver.try(:name) %></td>
-		<td><%= project.governor.try(:name) %></td>
-		<td><%= project.main_blade.try(:name) %></td>
-		<td><%= project.tail_blade.try(:name) %></td>
-		<td><%= project.paddle.try(:name) %></td>
-    <td><%= link_to 'Show', project %></td>
-    <td><%= link_to 'Edit', edit_project_path(project) %></td>
-    <td><%= link_to 'Destroy', project, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
+  	<% will_paginate @projects %>
+    <p><b>Project Name:   </b><%= project.name %></p>
+    <p><b>User:   </b><%= project.user %></p>
+    <p><b>Electric?:  </b><%= project.electric %></p>
+    <p><b>Flybarless?:  </b><%= project.flybarless %></p>
+    <p><b>Heli Kit:  </b><%= project.heli_kit.try(:name) %></p>
+		<p><b>Electric Motor:  </b><%= project.elec_motor.try(:name) %></p>
+		<p><b>Engine:  </b><%= project.engine.try(:name) %></p>
+		<p><b>Exhaust System:  </b><%= project.exhaust.try(:name) %></p>
+		<p><b>Speed Control:  </b><%= project.speed_control.try(:name) %></p>
+		<p><b>Cyclic Servos:  </b><%= project.cyclic_servo.try(:name) %></p>
+		<p><b>Rudder Servo:  </b><%= project.rudder_servo.try(:name) %></p>
+		<p><b>Throttle Servo:  </b><%= project.throttle_servo.try(:name) %></p>
+		<p><b>Rudder Gyro:  </b><%= project.rudder_gyro.try(:name) %></p>
+		<p><b>Flybarless Controller:  </b><%= project.fbl_unit.try(:name) %></p>
+		<p><b>Receiver:  </b><%= project.receiver.try(:name) %></p>
+		<p><b>Governor:  </b><%= project.governor.try(:name) %></p>
+		<p><b>Main Blades:  </b><%= project.main_blade.try(:name) %></p>
+		<p><b>Tail Blades:  </b><%= project.tail_blade.try(:name) %></p>
+		<p><b>Paddles:  </b><%= project.paddle.try(:name) %></p>
+    <p><%= link_to 'Edit', edit_project_path(project) %>&nbsp&nbsp<%= link_to 'Destroy', project, confirm: 'Are you sure?', method: :delete %>&nbsp&nbsp<%= button_to 'Create New Project', new_project_path %></p>
+    
+  <% will_paginate @projects %>
 <% end %>
-</table>
-
-<br />
-
-<%= link_to 'New Project', new_project_path %>

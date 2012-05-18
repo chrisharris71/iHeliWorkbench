@@ -1,0 +1,56 @@
+<h2>All Helicopter Projects</h2>
+
+<table>
+  <tr>
+    <th>Electric?</th>
+    <th>Flybarless?</th>
+    <th>Heli kit</th>
+    <th>Elec motor</th>
+    <th>Engine</th>
+    <th>Exhaust</th>
+    <th>Speed control</th>
+    <th>Cyclic servo</th>
+    <th>Rudder servo</th>
+    <th>Throttle servo</th>
+    <th>Rudder gyro</th>
+    <th>Fbl unit</th>
+    <th>Receiver</th>
+    <th>Governor</th>
+    <th>Main blade</th>
+    <th>Tail blade</th>
+    <th>Paddle</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @projects.each do |project| %>
+  <tr>
+    <td><%= project.user %></td>
+    <td><%= project.electric %></td>
+    <td><%= project.flybarless %></td>
+    <td><%= project.heli_kit.try(:name) %></td>
+		<td><%= project.elec_motor.try(:name) %></td>
+		<td><%= project.engine.try(:name) %></td>
+		<td><%= project.exhaust.try(:name) %></td>
+		<td><%= project.speed_control.try(:name) %></td>
+		<td><%= project.cyclic_servo.try(:name) %></td>
+		<td><%= project.rudder_servo.try(:name) %></td>
+		<td><%= project.throttle_servo.try(:name) %></td>
+		<td><%= project.rudder_gyro.try(:name) %></td>
+		<td><%= project.fbl_unit.try(:name) %></td>
+		<td><%= project.receiver.try(:name) %></td>
+		<td><%= project.governor.try(:name) %></td>
+		<td><%= project.main_blade.try(:name) %></td>
+		<td><%= project.tail_blade.try(:name) %></td>
+		<td><%= project.paddle.try(:name) %></td>
+    <td><%= link_to 'Show', project %></td>
+    <td><%= link_to 'Edit', edit_project_path(project) %></td>
+    <td><%= link_to 'Destroy', project, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Project', new_project_path %>

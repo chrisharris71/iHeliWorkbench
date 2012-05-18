@@ -7,87 +7,87 @@
 
 <p>
   <b>Electric:</b>
-  <%= @project.electric %>
+  <%= @project.electric? %>
 </p>
 
 <p>
   <b>Flybarless:</b>
-  <%= @project.flybarless %>
+  <%= @project.flybarless? %>
 </p>
 
 <p>
   <b>Heli kit:</b>
-  <%= @project.heli_kit_id %>
+  <%= @project.heli_kit.try(:name) %>
 </p>
 
 <p>
   <b>Elec motor:</b>
-  <%= @project.elec_motor_id %>
+  <%= @project.elec_motor.try(:name) %>
 </p>
 
 <p>
   <b>Engine:</b>
-  <%= @project.engine_id %>
+  <%= @project.engine.try(:name) %>
 </p>
 
 <p>
   <b>Exhaust:</b>
-  <%= @project.exhaust_id %>
+  <%= @project.exhaust.try(:name) %>
 </p>
 
 <p>
   <b>Speed control:</b>
-  <%= @project.speed_control_id %>
+  <%= @project.speed_control.try(:name) %>
 </p>
 
 <p>
   <b>Cyclic servo:</b>
-  <%= @project.cyclic_servo_id %>
+  <%= @project.cyclic_servo.try(:name) %>
 </p>
 
 <p>
   <b>Rudder servo:</b>
-  <%= @project.rudder_servo_id %>
+  <%= @project.rudder_servo.try(:name) %>
 </p>
 
 <p>
   <b>Throttle servo:</b>
-  <%= @project.throttle_servo_id %>
+  <%= @project.throttle_servo.try(:name) %>
 </p>
 
 <p>
   <b>Rudder gyro:</b>
-  <%= @project.rudder_gyro_id %>
+  <%= @project.rudder_gyro.try(:name) %>
 </p>
 
 <p>
   <b>Fbl unit:</b>
-  <%= @project.fbl_unit_id %>
+  <%= @project.fbl_unit.try(:name) %>
 </p>
 
 <p>
   <b>Receiver:</b>
-  <%= @project.receiver_id %>
+  <%= @project.receiver.try(:name) %>
 </p>
 
 <p>
   <b>Governor:</b>
-  <%= @project.governor_id %>
+  <%= @project.governor.try(:name) %>
 </p>
 
 <p>
   <b>Main blade:</b>
-  <%= @project.main_blade_id %>
+  <%= @project.main_blade.try(:name) %>
 </p>
 
 <p>
   <b>Tail blade:</b>
-  <%= @project.tail_blade_id %>
+  <%= @project.tail_blade.try(:name) %>
 </p>
 
 <p>
   <b>Paddle:</b>
-  <%= @project.paddle_id %>
+  <%= @project.paddle.try(:name) %>
 </p>
 
 

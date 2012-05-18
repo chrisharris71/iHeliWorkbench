@@ -19,12 +19,5 @@ class Project < ActiveRecord::Base
   belongs_to :paddle
   belongs_to :receiver
  	
- 	def heli_kit_name
- 		if heli_kit
- 			heli_kit.name
- 			else
- 			""
- 		end
- 	end
  	
 end
