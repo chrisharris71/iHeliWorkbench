@@ -1,5 +1,5 @@
 <h2>All Helicopter Projects</h2>
-
+<%= link_to 'Create New Project', new_project_path %>
 <% @projects.each do |project| %>
   	<% will_paginate @projects %>
     <p><b>Project Name:   </b><%= project.name %></p>
@@ -21,7 +21,7 @@
 		<p><b>Main Blades:  </b><%= project.main_blade.try(:name) %></p>
 		<p><b>Tail Blades:  </b><%= project.tail_blade.try(:name) %></p>
 		<p><b>Paddles:  </b><%= project.paddle.try(:name) %></p>
-    <p><%= link_to 'Edit', edit_project_path(project) %>&nbsp&nbsp<%= link_to 'Destroy', project, confirm: 'Are you sure?', method: :delete %>&nbsp&nbsp<%= button_to 'Create New Project', new_project_path %></p>
+    <p><%= link_to 'Edit', edit_project_path(project) %>&nbsp&nbsp<%= link_to 'Destroy', project, confirm: 'Are you sure?', method: :delete %>&nbsp&nbsp</p>
     
-  <% will_paginate @projects %>
+  	<% will_paginate @projects %>
 <% end %>
