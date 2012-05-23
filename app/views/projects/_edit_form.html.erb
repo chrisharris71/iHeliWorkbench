@@ -1,8 +1,8 @@
 <div class="form_back">
 	<%= simple_form_for @project, :html => {:class => ''} do |f| %>
 	  <%= f.error_notification %>
-	    <h3 class="leftalign"><%= current_user.name %>'s New Heli Project</h3>
-	    <%= f.input :name, :placeholder => 'Enter a name for new project', :label => 'Project Name:' %>
+	    <h3><%= current_user.name %>'s New Heli Project</h3>
+	    <%= f.input :name, :placeholder => 'Enter a name for new project' %>
 	    <%= f.hidden_field :user_id, :value => current_user.id %>
 	    <div class="electric"><%= f.input :electric, :as => :radio_buttons %></div>
 	    <div class="flybarless"><%= f.input :flybarless, :as => :radio_buttons %></div>
@@ -21,10 +21,10 @@
 	    <%= f.input :main_blade_id, :collection => MainBlade.all, :prompt => 'Choose Main Blades' %>
 	    <%= f.input :tail_blade_id, :collection => TailBlade.all, :prompt => 'Choose Tail Blades' %>
 	    <div class="is_flybarred"><%= f.input :paddle_id, :collection => Paddle.all, :prompt => 'Choose Paddles' %></div>
-	    
-	    	<%= f.submit "Create Project >> ", class: "btn btn-large btn-primary create2" %>	  
+<!-- 	    	<%= link_to 'Back', projects_path %> -->
+	    	<%= f.submit "Update Project >> ", class: "btn btn-large btn-primary create2" %>	  
 	  	
-	  	<%= link_to 'Back', projects_path %>
+	  	
 	<% end %>
 </div>
 

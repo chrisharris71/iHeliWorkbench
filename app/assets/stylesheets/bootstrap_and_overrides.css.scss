@@ -280,6 +280,11 @@ margin-bottom: 50px;
 padding-left: 15px;
 }
 
+.form_back	{
+	width: 30em;
+	margin: 20px auto;
+}
+
 .form_back a{
 padding-left: 30px;
 }
@@ -584,5 +589,23 @@ margin: 20px 0 20px 0;
 }
 
 #new_project	{
-	padding-right: 50px;
+	margin-left: 50px;
+}
+h3.leftalign	{
+	text-align: left;
+	margin: 20px 0 10px 0;
+} 
+h3.offset1	{
+	text-align: left;
+	margin: 20px 0 10px 0;
+}
+select:focus, input:focus, textarea:focus {
+  border-color: rgba(82, 168, 236, 0.8);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(82, 168, 236, 0.6);
+  outline: 0 none;
+}
+
+.offset	{
+	margin-left: 20px;
+	margin-bottom: 20px;
 }

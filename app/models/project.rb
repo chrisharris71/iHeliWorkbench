@@ -1,5 +1,5 @@
 class Project < ActiveRecord::Base
-  attr_accessible :cyclic_servo_id, :elec_motor_id, :engine_id, :exhaust_id, :fbl_unit_id, :governor_id, :heli_kit_id, :main_blade_id, :paddle_id, :receiver_id, :rudder_gyro_id, :rudder_servo_id, :speed_control_id, :tail_blade_id, :throttle_servo_id, :user_id, :electric, :flybarless
+  attr_accessible :cyclic_servo_id, :elec_motor_id, :engine_id, :exhaust_id, :fbl_unit_id, :governor_id, :heli_kit_id, :main_blade_id, :paddle_id, :receiver_id, :rudder_gyro_id, :rudder_servo_id, :speed_control_id, :tail_blade_id, :throttle_servo_id, :user_id, :electric, :flybarless, :name
 	
 	belongs_to :user
 #   <-- All the components are listed here -->

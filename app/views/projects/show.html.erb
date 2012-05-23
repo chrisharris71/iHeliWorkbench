@@ -2,7 +2,7 @@
 
 <p>
   <b>User:</b>
-  <%= current_user.name %>
+  <%= @project.user.try(:name) %>
 </p>
 
 <p>

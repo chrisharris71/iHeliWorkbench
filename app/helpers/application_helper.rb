@@ -10,8 +10,4 @@ module ApplicationHelper
     end
   end
 
-	# def vendor
-# 		@vendor = vendor
-# 	end
-
 end
