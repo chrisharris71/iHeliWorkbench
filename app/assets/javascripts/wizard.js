@@ -31,6 +31,17 @@ $(function(){
 					return false;
 				};
 		
+		}); /* ----- End of Change Event Handler ----- */
+		
+		$('.gsc-search-button').click(function()	{
+			$('#main_content').fadeOut('fast');
+			$('#cse').fadeIn('fast');
 		});
+		
+		$('.gsc-clear-button').click(function()	{
+			$('#cse').fadeOut('fast');
+			$('#main_content').fadeIn('fast');
 			
+		});
+		
 });

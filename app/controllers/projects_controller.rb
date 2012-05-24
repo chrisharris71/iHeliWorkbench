@@ -3,6 +3,7 @@ class ProjectsController < ApplicationController
   # GET /projects.json
   def index
 #     @projects = Project.order("name").page(params[:page]).per_page(1)
+    
     @projects = current_user.projects.paginate(page: params[:page], :per_page => 1)
     respond_to do |format|
       format.html # index.html.erb

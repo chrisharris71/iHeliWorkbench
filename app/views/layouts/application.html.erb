@@ -11,21 +11,23 @@
     <%= render 'layouts/shim' %>
   </head>
   <body>
-    <div id="wrapper">
-    <%= render 'layouts/header' %>
-    
-    	<% flash.each do |key, value| %>
-        <%= content_tag(:div, value, class: "alert alert-#{key}") %>
-      <% end %>
-      <div id="main_content"><%= yield %></div>
-      
-
-      <%= render(:partial => 'layouts/sidebar') if (params[:action] == 'home') %>
-      
-      <%= render 'layouts/footer' %>
-      
-
-      <%= debug(params) if Rails.env.development? %>
-    </div>
+	    <div id="wrapper">
+	    <%= render 'layouts/header' %>
+	    
+	    	<% flash.each do |key, value| %>
+	        <%= content_tag(:div, value, class: "alert alert-#{key}") %>
+	      <% end %>
+	      
+	      <div id="cse" style="width:100%;"></div>
+	      <div id="main_content">
+	      <%= yield %></div>
+	      
+	      <%= render(:partial => 'layouts/sidebar') if (params[:action] == 'home') %>
+	      
+	      <%= render 'layouts/footer' %>
+	      
+<!-- 	      <%= debug(params) if Rails.env.development? %> -->
+	    </div> <!-- End of the wrapper div -->
+  	
   </body>
 </html>

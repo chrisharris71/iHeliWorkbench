@@ -1,30 +1,32 @@
 <div class="form_back">
-	<%= simple_form_for @project, :html => {:class => ''} do |f| %>
+	<%= simple_form_for @project, :html => {:class => 'form-horizontal'} do |f| %>
 	  <%= f.error_notification %>
 	    <h3 class="leftalign"><%= current_user.name %>'s New Heli Project</h3>
+	   <hr/>
 	    <%= f.input :name, :placeholder => 'Enter a name for new project', :label => 'Project Name:' %>
 	    <%= f.hidden_field :user_id, :value => current_user.id %>
-	    <div class="electric"><%= f.input :electric, :as => :radio_buttons %></div>
-	    <div class="flybarless"><%= f.input :flybarless, :as => :radio_buttons %></div>
-	    <%= f.input :heli_kit_id, :collection => HeliKit.all, :prompt => 'Choose a Helicopter Kit' %>
-	    <div class="is_electric"><%= f.input :elec_motor_id, :collection => ElecMotor.all, :prompt => 'Choose an Electric Motor' %></div>
-	    <div class="is_nitro"><%= f.input :engine_id, :collection => Engine.all, :prompt => 'Choose an Engine' %></div>
-	    <div class="is_nitro"><%= f.input :exhaust_id, :collection => Exhaust.all, :prompt => 'Choose an Exhaust' %></div>
-	    <div class="is_electric"><%= f.input :speed_control_id, :collection => SpeedControl.all, :prompt => 'Choose a Speed Controller' %></div>
-	    <%= f.input :cyclic_servo_id, :collection => CyclicServo.all, :prompt => 'Choose Cyclic Servos' %>
-	    <%= f.input :rudder_servo_id, :collection => RudderServo.all, :prompt => 'Choose a Rudder Servo' %>
-	    <div class="is_nitro"><%= f.input :throttle_servo_id, :collection => ThrottleServo.all, :prompt => 'Choose a Throttle Servo' %></div>
-	    <div class="is_flybarred"><%= f.input :rudder_gyro_id, :collection => RudderGyro.all, :prompt => 'Choose a Rudder Gyro' %></div>
-	    <div class="is_flybarless"><%= f.input :fbl_unit_id, :collection => FblUnit.all, :prompt => 'Choose a Flybarless Controller' %></div>
-	    <%= f.input :receiver_id, :collection => Receiver.all, :prompt => 'Choose a Receiver' %>
-	    <div class="is_nitro"><%= f.input :governor_id, :collection => Governor.all, :prompt => 'Choose a Governor' %></div>
-	    <%= f.input :main_blade_id, :collection => MainBlade.all, :prompt => 'Choose Main Blades' %>
-	    <%= f.input :tail_blade_id, :collection => TailBlade.all, :prompt => 'Choose Tail Blades' %>
-	    <div class="is_flybarred"><%= f.input :paddle_id, :collection => Paddle.all, :prompt => 'Choose Paddles' %></div>
+	    <div class="electric"><%= f.input :electric, :as => :radio_buttons, :label => 'Electric Power:' %></div>
+	    <div class="flybarless"><%= f.input :flybarless, :as => :radio_buttons, :label => 'Flybarless:' %></div>
+	    <%= f.input :heli_kit_id, :collection => HeliKit.all, :prompt => 'Choose a Helicopter Kit', :label => 'Helicopter Kit:' %>
+	    <div class="is_electric"><%= f.input :elec_motor_id, :collection => ElecMotor.all, :prompt => 'Choose an Electric Motor', :label => 'Electric Motor:' %></div>
+	    <div class="is_nitro"><%= f.input :engine_id, :collection => Engine.all, :prompt => 'Choose an Engine', :label => 'Engine:' %></div>
+	    <div class="is_nitro"><%= f.input :exhaust_id, :collection => Exhaust.all, :prompt => 'Choose an Exhaust', :label => 'Exhaust System:' %></div>
+	    <div class="is_electric"><%= f.input :speed_control_id, :collection => SpeedControl.all, :prompt => 'Choose a Speed Controller', :label => 'Electronic Speed Controller:' %></div>
+	    <%= f.input :cyclic_servo_id, :collection => CyclicServo.all, :prompt => 'Choose Cyclic Servos', :label => 'Cyclic Servos:' %>
+	    <%= f.input :rudder_servo_id, :collection => RudderServo.all, :prompt => 'Choose a Rudder Servo', :label => 'Rudder Servo:' %>
+	    <div class="is_nitro"><%= f.input :throttle_servo_id, :collection => ThrottleServo.all, :prompt => 'Choose a Throttle Servo', :label => 'Throttle Servo:' %></div>
+	    <div class="is_flybarred"><%= f.input :rudder_gyro_id, :collection => RudderGyro.all, :prompt => 'Choose a Rudder Gyro', :label => 'Rudder Gyro:' %></div>
+	    <div class="is_flybarless"><%= f.input :fbl_unit_id, :collection => FblUnit.all, :prompt => 'Choose a Flybarless Controller', :label => 'Flybarless Controller:' %></div>
+	    <%= f.input :receiver_id, :collection => Receiver.all, :prompt => 'Choose a Receiver', :label => 'Receiver:' %>
+	    <div class="is_nitro"><%= f.input :governor_id, :collection => Governor.all, :prompt => 'Choose a Governor', :label => 'Throttle Governor:' %></div>
+	    <%= f.input :main_blade_id, :collection => MainBlade.all, :prompt => 'Choose Main Blades', :label => 'Main Rotor Blades:' %>
+	    <%= f.input :tail_blade_id, :collection => TailBlade.all, :prompt => 'Choose Tail Blades', :label => 'Tail Rotor Blades:' %>
+	    <div class="is_flybarred"><%= f.input :paddle_id, :collection => Paddle.all, :prompt => 'Choose Paddles', :label => 'Flybar Paddles:' %></div>
 	    
 	    	<%= f.submit "Create Project >> ", class: "btn btn-large btn-primary create2" %>	  
 	  	
-	  	<%= link_to 'Back', projects_path %>
+	  	
 	<% end %>
+	<p class="centered"><%= link_to 'Back', projects_path %></p>
 </div>
 

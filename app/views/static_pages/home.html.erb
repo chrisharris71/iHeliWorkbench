@@ -12,8 +12,9 @@
 							with an accurate shopping list that is custom made just for you!
 						</p> 
 					</div> <!-- Closes the wiz_desc div -->
-					<%= button_to 'More Info >>', {:controller => 'static_pages#home'}, {:class => "btn btn-large btn-primary #more_info", :id => "more_info"} %>
-					
+					<% if signed_in? %>
+						<%= link_to 'Project Wizard >>', '/projects', {:class => "btn btn-large btn-primary #more_info", :id => "more_info"} %>
+					<% end %>
 				</div> <!-- Closes the wizard div -->
 				<div id="column1">
 					<h3>Reviews and Comments</h3>

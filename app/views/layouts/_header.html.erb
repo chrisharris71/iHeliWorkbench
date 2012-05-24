@@ -8,8 +8,19 @@
 						<td>
 						<!-- Start of Google Sustom Search Code -->
 						
-							<div id="cse"></div>
-
+							<div id="cse-search-form" style="width: 100%;">Loading</div>
+								<script src="http://www.google.com/jsapi" type="text/javascript"></script>
+								<script type="text/javascript"> 
+  								google.load('search', '1', {language : 'en', style : google.loader.themes.SHINY});
+  								google.setOnLoadCallback(function() {
+    							var customSearchOptions = {};  var customSearchControl = new google.search.CustomSearchControl(
+      						'003607113975793371547:nou9x2dvfh8', customSearchOptions);
+    							customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
+    							var options = new google.search.DrawOptions();
+    							options.setSearchFormRoot('cse-search-form');
+    							customSearchControl.draw('cse', options);
+  								}, true);
+									</script>
       			<!-- End of Google Custom Search Code -->
 						</td>
 					</tr>

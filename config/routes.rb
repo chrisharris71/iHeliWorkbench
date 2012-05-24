@@ -33,6 +33,8 @@ SampleApp::Application.routes.draw do  resources :paddles
   match '/admin',		to: 'admin#index' 
   match '/projects',	to: 'projects#index'
  	match '/projects/new', to: 'projects#new'
+ 	match '/terms', to: 'static_pages#terms'
+ 	match '/privacy', to: 'static_pages#privacy'
 	
 	
   # The priority is based upon order of creation:

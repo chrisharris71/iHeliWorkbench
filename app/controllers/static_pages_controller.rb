@@ -13,4 +13,10 @@ class StaticPagesController < ApplicationController
   
   def user_account
   end
+  
+  def privacy
+  end
+  
+  def terms
+  end
 end

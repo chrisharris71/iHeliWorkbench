@@ -2,7 +2,7 @@
 	<%= simple_form_for @heli_kit, :html => {:class => 'form4'} do |f| %>
 	  <%= f.input :name %>
 	  <%= f.input :part_number %>
-	  <%= f.association :size, :prompt => "Choose a Category" %>
+	  <%= f.input :size %>
 	  <%= f.input :power, :collection => [:Electric, :Fuel], :prompt => "Choose a Power Source"  %>
 	  <%= f.association :manufacturer, :prompt => "Choose a Manufacturer"  %>
 	  <%= f.button :submit %>
