@@ -209,7 +209,8 @@ margin-left: 187px;
 margin-left: 170px;
 }
 .create2 {
-margin-left: 242px;
+margin-left: 292px;
+
 }
 }
 
@@ -634,7 +635,7 @@ label.electric	{
 	padding-top: 0px;
 	padding-right: 30px;
 }
-div[class^='box-holder']	{
+div[class^='vbox-holder']	{
 	
 	display: -moz-box;
 	display: -webkit-box;
@@ -642,10 +643,18 @@ div[class^='box-holder']	{
 	-webkit-box-orient: vertical;
 
 }
+div[class^='hbox-holder']	{
+	
+	display: -moz-box;
+	display: -webkit-box;
+	-moz-box-orient: horizontal;
+	-webkit-box-orient: horizontal;
+
+}
 
 div[class^='flex']	{
 border-bottom: 1px solid gray;
-width: 190px;
+width: 180px;
 padding: 10px;
 margin-left: 40px;
 -moz-box-flex: 1;

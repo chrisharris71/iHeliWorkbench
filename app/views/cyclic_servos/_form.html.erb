@@ -1,15 +1,13 @@
-<%= simple_form_for(@cyclic_servo) do |f| %>
-  <%= f.error_notification %>
-
-  <div class="form-inputs">
-    <%= f.input :part_number %>
-    <%= f.input :max_torque %>
-    <%= f.input :max_speed %>
-    <%= f.input :size %>
-    <%= f.input :manufacturer_id %>
-  </div>
-
-  <div class="form-actions">
-    <%= f.button :submit %>
-  </div>
-<% end %>
+<div class="form_back">	
+	<%= simple_form_for @cyclic_servo, :html => {:class => 'form-horizontal'} do |f| %>
+	  <%= f.error_notification %>
+	    <h3 class="leftalign">New Cyclic Servo</h3>
+	    <%= f.input :part_number %>
+	    <%= f.input :max_torque %>
+	    <%= f.input :max_speed %>
+	    <%= f.input :size %>
+	    <%= f.input :manufacturer_id, :collection => Manufacturer.all, :prompt => 'Choose a Manufacturer' %>
+			<%= f.submit "Create >>", class: "btn btn-large btn-primary create2" %>
+	<% end %>
+	<p class="centered"><%= link_to 'Back', cyclic_servos_path %></p>
+</div>

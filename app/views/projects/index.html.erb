@@ -1,11 +1,10 @@
 <div class="">
 	<div class="">
-		<h3 class="leftalign">All My Helicopter Projects
+		<h3 class="leftalign">All My Helicopter Projects  -
 		<%= link_to ' Create New Project', new_project_path %></h3>
-		<% will_paginate %>
 		<% @projects.each do |project| %>
 	<hr>
-	<div class="box-holder-0">
+	<div class="vbox-holder-0">
 		<div class="equal"><h3>General Info</h3></div>
 		<div class="flex-1"><b>Project Name:   </b><br><%= project.name %></div>
 		<div class="flex-2"><b>Electric?:  </b><br><%= project.electric %></div>
@@ -13,7 +12,7 @@
 		<div class="flex-4"><b>Heli Kit:  </b><br><%= project.heli_kit.try(:name) %></div>
 	</div>
 	
-	<div class="box-holder-1">
+	<div class="vbox-holder-1">
 		<div class="equal"><h3>Power</h3></div>
 		<div class="flex-1"><b>Electric Motor:  </b><br><%= project.elec_motor.try(:name) %></div>
 		<div class="flex-2"><b>Engine:  </b><br><%= project.engine.try(:name) %></div>
@@ -22,7 +21,7 @@
 		
 	</div>
 	
-	<div class="box-holder-2">
+	<div class="vbox-holder-2">
 		<div class="equal"><h3>Electronics</h3></div>
 		<div class="flex-1"><b>Cyclic Servos:  </b><br><%= project.cyclic_servo.try(:name) %></div>	
 		<div class="flex-2"><b>Rudder Servo:  </b><br><%= project.rudder_servo.try(:name) %></div>
@@ -32,7 +31,7 @@
 		<div class="flex-6"><b>Governor:  </b><br><%= project.governor.try(:name) %></div>
 	</div>
 	
-	<div class="box-holder-3">
+	<div class="vbox-holder-3">
 		<div class="equal"><h3>Blades/Paddles</h3></div>
 		<div class="flex-1"><b>Main Blades:  </b><br><%= project.main_blade.try(:name) %></div>
 		<div class="flex-2"><b>Tail Blades:  </b><br><%= project.tail_blade.try(:name) %></div>

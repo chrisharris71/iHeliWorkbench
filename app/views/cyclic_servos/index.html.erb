@@ -1,31 +1,20 @@
-<h2>All Cyclic Servos</h2>
+<div class="">
+	<div class="">
+		<h3 class="leftalign">All Cyclic Servos  -
+		<%= link_to 'New Cyclic Servo', new_cyclic_servo_path %></h3>
 
-<table>
-  <tr>
-    <th>Part number</th>
-    <th>Max torque</th>
-    <th>Max speed</th>
-    <th>Size</th>
-    <th>Manufacturer</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+		<% @cyclic_servos.each do |cyclic_servo| %>
+	<hr>
+	<div class="hbox-holder-0">
+		<div class="flex-1"><b>Part Number:   </b><br><%= cyclic_servo.part_number %></div>
+		<div class="flex-2"><b>Max Torque:  </b><br><%= cyclic_servo.max_torque %></div>
+		<div class="flex-3"><b>Max Speed:  </b><br><%= cyclic_servo.max_speed %></div>
+		<div class="flex-4"><b>Size:  </b><br><%= cyclic_servo.size %></div>
+		<div class="flex-4"><b>Manufacturer:  </b><br><%= cyclic_servo.manufacturer.name %></div>
+	</div>
+	<br>
+	<p class="centered"><%= link_to 'Edit', edit_cyclic_servo_path(cyclic_servo) %>&nbsp&nbsp<%= link_to 'Destroy', cyclic_servo, confirm: 'Are you sure?', method: :delete %>&nbsp&nbsp</p>
+		<% end %>
+	</div>
+</div>
 
-<% @cyclic_servos.each do |cyclic_servo| %>
-  <tr>
-    <td><%= cyclic_servo.part_number %></td>
-    <td><%= cyclic_servo.max_torque %></td>
-    <td><%= cyclic_servo.max_speed %></td>
-    <td><%= cyclic_servo.size %></td>
-    <td><%= cyclic_servo.manufacturer_id %></td>
-    <td><%= link_to 'Show', cyclic_servo %></td>
-    <td><%= link_to 'Edit', edit_cyclic_servo_path(cyclic_servo) %></td>
-    <td><%= link_to 'Destroy', cyclic_servo, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
-
-<%= link_to 'New Cyclic Servo', new_cyclic_servo_path %>
