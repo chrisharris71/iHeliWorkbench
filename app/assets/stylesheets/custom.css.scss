@@ -1,6 +1,3 @@
-
-
-
 /* mixins, variables, etc. */
 
 $grayMediumLight: #eaeaea;
@@ -178,13 +175,15 @@ aside {
 	
 	padding: 5px 12px;
 	background-image: -moz-linear-gradient(50% 100%, #ffae0c, #ff980d);
-	background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, from(white), to(#f4f4f4));
+	background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, from(#ffae0c), to(#ff980d));
 	
 	
 	border: 1px solid #bcbcbc;
 		&:hover	{
 		background-color: #ffae0c;
 		background-image: -moz-linear-gradient(50% 100%, #ffae0c, #ff980d);	
+		background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, from(#ffae0c), to(#ff980d));
+		
 		color: white;
 		text-shadow: none;
 		}
