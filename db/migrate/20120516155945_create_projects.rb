@@ -21,6 +21,6 @@ class CreateProjects < ActiveRecord::Migration
 #       t.string :paddle
 # 
 #       t.timestamps
-    end
+#     end
   end
 end
