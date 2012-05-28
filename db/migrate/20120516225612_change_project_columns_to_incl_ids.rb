@@ -1,5 +1,6 @@
 class ChangeProjectColumnsToInclIds < ActiveRecord::Migration
   def change
+    remove_table :projects
     create_table :projects do |t|
       t.integer :user_id
       t.boolean :electric
