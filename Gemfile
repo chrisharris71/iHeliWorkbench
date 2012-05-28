@@ -9,6 +9,7 @@ gem 'bootstrap-will_paginate', '0.0.5'
 gem 'simple_form'
 gem 'country_select'
 gem 'pg'
+gem 'thin'
 
 
 # Bundle edge Rails instead:
