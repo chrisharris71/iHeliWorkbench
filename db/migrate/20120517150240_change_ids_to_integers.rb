@@ -1,7 +1,7 @@
 class ChangeIdsToIntegers < ActiveRecord::Migration
   def change
     change_table :projects do |t|
-      t.integer :user_id
+#       t.integer :user_id
       t.boolean :electric
       t.boolean :flybarless
       t.integer :heli_kit_id
