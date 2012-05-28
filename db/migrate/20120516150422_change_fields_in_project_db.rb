@@ -1,6 +1,6 @@
 class ChangeFieldsInProjectDb < ActiveRecord::Migration
   def up
-  	remove_column :projects, :type
+#   	remove_column :projects, :type
   	add_column :projects, :heli_kit, :string
   	add_column :projects, :power, :string
   	add_column :projects, :type, :string
