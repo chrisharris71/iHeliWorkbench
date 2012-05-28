@@ -20,7 +20,7 @@ class ChangeIdsToIntegers < ActiveRecord::Migration
       t.integer :tail_blade_id
       t.integer :paddle_id
 
-      t.timestamps
+#       t.timestamps
     end
   end
 end
