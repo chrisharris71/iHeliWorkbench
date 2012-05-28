@@ -1,0 +1,19 @@
+.electric, .flybarless	{
+	display: -moz-box;
+	display: -webkit-box;
+	-moz-box-orient: horizontal;
+	-webkit-box-orient: horizontal;
+
+}
+
+.electric, .flybarless, .radio_buttons {
+	width: 100px;
+}
+
+.flybarless, .electric	{
+	padding-left: 30px;
+	-moz-box-flex: 1;
+	-moz-box-pack: center;
+	-webkit-box-flex: 1;
+	-webkit-box-pack: center;
+}
